@@ -1,2 +1,2 @@
-public class Market extends Structure{
+public class Market extends Structures {
 }

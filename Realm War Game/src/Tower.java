@@ -1,2 +1,2 @@
-public class Tower extends Structure{
+public class Tower extends Structures {
 }

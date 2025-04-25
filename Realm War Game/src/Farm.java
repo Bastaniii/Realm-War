@@ -1,2 +1,2 @@
-public class Farm extends Structure{
+public class Farm extends Structures {
 }

@@ -1,2 +1,2 @@
-public class Barrack extends Structure {
+public class Barrack extends Structures {
 }

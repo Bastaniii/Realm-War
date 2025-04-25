@@ -1,2 +1,2 @@
-public class TownHall extends Structure {
+public class TownHall extends Structures {
 }
