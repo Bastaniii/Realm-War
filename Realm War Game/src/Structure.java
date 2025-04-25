@@ -1,3 +1,3 @@
-Class Structure{
+public class  Structure implements Cost{
 
-        }
+}
