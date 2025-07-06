@@ -1,4 +1,4 @@
 package Game.src.main.java.org.example.Models.structures;
 
-public class Market {
+public class Farm1 {
 }
