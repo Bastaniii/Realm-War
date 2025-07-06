@@ -1,4 +1,4 @@
-package Game.src.main.java.org.example.Models.Block;
+package org.example.Models.Block;
 
 
 
