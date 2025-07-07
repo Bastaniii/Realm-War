@@ -1,4 +1,4 @@
-package Game.src.main.java.org.example.Models.units;
+package src.Game.src.main.java.org.example.Models.units;
 
 public class Swordman {
 }
