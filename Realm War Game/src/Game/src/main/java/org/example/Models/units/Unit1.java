@@ -1,6 +1,6 @@
 package src.Game.src.main.java.org.example.Models.units;
 
-public class Unit1 {
+public abstract class Unit1 {
     private int x;
     private int y;
     protected int hitPoint;
@@ -11,9 +11,19 @@ public class Unit1 {
     protected int ration;
     protected int unitSpace;
     protected int level;
-    public Unit1() {
+    protected String producedBy;
+    public Unit1(int x,int y,int hitPoint,int  movementRange,int attackPower,int attackRange,int payment,int ration,int unitSpace,int level,String producedBy) {
         this.x=x;
         this.y=y;
+        this.hitPoint=hitPoint;
+        this.movementRange=movementRange;
+        this.attackPower=attackPower;
+        this.attackRange=attackRange;
+        this.payment=payment;
+        this.ration=ration;
+        this.unitSpace=unitSpace;
+        this.level=level;
+        this.producedBy=producedBy;
     }
     public int getHitPoint() {
         return hitPoint;
@@ -48,10 +58,25 @@ public class Unit1 {
     public int gety() {
         return y;
     }
-//public static void merge(Units u1, Units u2) {
+    //public static void merge(Units u1, Units u2) {
     //      int newLevel;
     //    if(u1.level==u2.level && u1.level<=4) {
     //      newLevel=u1.level+1;
     //}
 //}
+    public int getlevel() {
+        return level;
+    }
+    public void setlevel(int level) {
+        this.level = level;
+    }
+    public String getProducedBy() {
+        return producedBy;
+    }
+    public boolean canMerge(Unit1 units1, Unit1 units2) {
+        if(units1.getlevel()==units2.getlevel()&& units1.getlevel() <4 && units2.getlevel()<4 ) {
+            return true;
+        }
+        return false;
+    }
 }
