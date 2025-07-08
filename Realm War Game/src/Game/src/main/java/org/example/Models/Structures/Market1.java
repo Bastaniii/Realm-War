@@ -1,4 +1,4 @@
-package Game.src.main.java.org.example.Models.structures;
+package src.Game.src.main.java.org.example.Models.Structures;
 import src.Game.src.main.java.org.example.Models.structures.Structure1;
 
 public class Market1 extends Structure1{

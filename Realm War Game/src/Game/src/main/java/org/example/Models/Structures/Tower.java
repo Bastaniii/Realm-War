@@ -1,5 +1,7 @@
-package src.Game.src.main.java.org.example.Models.structures;
+package src.Game.src.main.java.org.example.Models.Structures;
 
+//import src.Game.src.main.java.org.example.Models.units.Unit1;
+import src.Game.src.main.java.org.example.Models.structures.Structure1;
 import src.Game.src.main.java.org.example.Models.units.Unit1;
 
 public class Tower extends Structure1 {
