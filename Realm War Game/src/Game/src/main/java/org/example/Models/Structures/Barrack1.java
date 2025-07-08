@@ -29,8 +29,10 @@ public class Barrack1 extends Structure1{
     }
 
 
-    public void updateLevelUpCost(Barrack1 barrack) {
-        barrack.setLevelUpCost(barrack.getLevelUpCost()+5);
+            public void updateLevelUpCost(Barrack1 barrack) {
+                barrack.setLevelUpCost(barrack.getLevelUpCost()+5);
+
+
     }
     public void removeUnit(Barrack1 barrack, Unit1 unit) {
         barrack.setUnitSpace(barrack.getUnitSpace()+unit.getUnitSpace());
