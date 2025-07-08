@@ -1,5 +1,4 @@
-package Game.src.main.java.org.example.Models.structures;
-import src.Game.src.main.java.org.example.Models.structures.Structure1;
+package src.Game.src.main.java.org.example.Models.Structures;
 
 public class Market1 extends Structure1{
     protected int gold;
