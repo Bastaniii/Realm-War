@@ -1,6 +1,6 @@
 package src.Game.src.main.java.org.example.Models.units;
 
-public abstract class Unit1 {
+public class Unit1 {
     private int x;
     private int y;
     protected int hitPoint;

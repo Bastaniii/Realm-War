@@ -1,6 +1,6 @@
-package org.example.Models.Block;
+package src.Game.src.main.java.org.example.Models.Block;
 
-import org.example.Models.Block.Block;
+
 
 public class VoidBlock extends Block {
 
