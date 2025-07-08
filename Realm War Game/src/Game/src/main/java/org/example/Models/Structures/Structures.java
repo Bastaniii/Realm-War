@@ -1,4 +1,4 @@
-package src.Game.src.main.java.org.example.Models.Structures;
+package Game.src.main.java.org.example.Models.structures;
 
 public class Structures {
 }

@@ -1,4 +1,4 @@
-package src.Game.src.main.java.org.example.Models.structures;
+package src.Game.src.main.java.org.example.Models.Structures;
 
 public class Farm1 extends Structure1 {
     protected int food;
