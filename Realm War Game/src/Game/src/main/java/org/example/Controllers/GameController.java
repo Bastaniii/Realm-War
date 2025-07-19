@@ -219,4 +219,101 @@ public class GameController extends Container {
 
 
     }
+    private void FirstUI(){
+        game=new GameView();
+        start = new StartPanel();
+        start.getButton1Start().addActionListener(e ->  button1());
+        start.getButton2Start().addActionListener(e -> button2());
+        start.getButton3Start().addActionListener(e -> button3());
+        game.setContentPane(start);
+        game.revalidate();
+        game.repaint();
+    }
+    public void firstButtons(){
+        gameManager=new GameManager(players);
+        board=new GameBoardPanel();
+        addBoard();
+        updateBoard(board,gameManager);
+        actionPanel=new ActionPanel();
+        actionPanel.getAttack().addActionListener(e -> attack());
+        actionPanel.getMove().addActionListener(e -> move());
+        actionPanel.getBuildStructure().addActionListener(e -> buildNewStructure());
+        actionPanel.getLevelUpStructure().addActionListener(e -> levelUp());
+        actionPanel.getMerge().addActionListener(e -> merge());
+        actionPanel.getBuildStructure().addActionListener(e -> buildNewStructure());
+        actionPanel.getBuyUnit().addActionListener( buyNewUnit());
+        actionPanel.getEndTurn().addActionListener(e ->  endTurn());
+        actionPanel.getBarrack().addActionListener(e -> barrackButton());
+        actionPanel.getFarm().addActionListener(e -> farmButton());
+        actionPanel.getMarket().addActionListener(e -> marketButton());
+        actionPanel.getTower().addActionListener(e -> towerButton());
+        actionPanel.getPeasant().addActionListener(e -> peasantButton());
+        actionPanel.getSpearman().addActionListener(e -> spearmanButton());
+        actionPanel.getSwordman().addActionListener(e -> swordmanButton());
+        actionPanel.getKnight().addActionListener(e -> knightButton());
+        infoPanel=new InfoPanel();
+        infoPanel.update(gameManager.whoseTurn());
+        SwingUtilities.invokeLater(this::StartTurn);
+        rightPanel.add(infoPanel);
+        rightPanel.add(actionPanel);
+        start.getStart().dispose();
+        secondUI();
+    }
+    public boolean isValid(int a){
+        if(0<=a && a<20){
+            return true;
+        }
+        return false;
+    }
+    public void refresh(){
+        gameManager.setAllAttackable();
+        gameManager.setAllMovable();
+        gameManager.setAllPlaceUnit();
+        gameManager.setAllCanMakeStructure();
+        gameManager.setAllVCanLevelUpStructure();
+        game.revalidate();
+        game.repaint();
+        this.attackMode=false;
+        this.AttackerX=-1;
+        this.AttackerY=-1;
+        this.TargetX=-1;
+        this.TargetY=-1;
+        this.moveMode=false;
+        this.fromX=-1;
+        this.fromY=-1;
+        this.toX=-1;
+        this.toY=-1;
+        this.mergeMode=false;
+        this.firstX=-1;
+        this.firstY=-1;
+        this.secondX=-1;
+        this.secondY=-1;
+        this.buyUnitMode=false;
+        this.unitX=-1;
+        this.unitY=-1;
+        this.levelUpStructureMode=false;
+        this.levelUpX=-1;
+        this.levelUpY=-1;
+        this.buildStructureMode=false;
+        this.structureX=-1;
+        this.structureY=-1;
+        this.newUnit=-1;
+        this.newStructure="";
+        this.producerX=-1;
+        this.producerY=-1;
+        this.newUnitX=-1;
+        this.newUnitY=-1;
+    }
+    public void button1(){
+        this.players=2;
+        firstButtons();
+    }
+    public void button2(){
+        this.players=3;
+        firstButtons();
+    }
+    public void button3(){
+        this.players=4;
+        firstButtons();
+    }
 }
