@@ -481,9 +481,10 @@ public class GameManager {
         return false;
     }
     public void merge(Player player,int unit1x,int unit1y,int unit2x,int unit2y) {
+        int Level=GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel();
         int from1=GameBoard.gameBoard[unit1x][unit1y].getUnit().getProducedBy();
         int from2=GameBoard.gameBoard[unit2x][unit2y].getUnit().getProducedBy();
-        if(GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel()==1){
+        if(Level==1){
             for(int i=0; i<player.playerStructures.size();i++){
                 if(player.getStructure(i).getProduceNum()==from2){
                     player.getStructure(i).setUnitSpace(player.getStructure(i).getUnitSpace()+1);
@@ -496,7 +497,7 @@ public class GameManager {
             GameBoard.gameBoard[unit2x][unit2y].setUnit(new Spearman(player.getPlayerNumber(),from1));
             player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
         }
-        if(GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel()==2){
+        if(Level==2){
             int from=0;
             if(HasEnoughUnitSpaceByPN(player,from1,1)){
                 from=from1;
@@ -549,7 +550,7 @@ public class GameManager {
             GameBoard.gameBoard[unit2x][unit2y].setUnit(new Swordman(player.getPlayerNumber(),from));
             player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
         }
-        if(GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel()==3){
+        if(Level==3){
             for(int i=0; i<player.playerStructures.size();i++){
                 if(player.getStructure(i).getProduceNum()==from2){
                     player.getStructure(i).setUnitSpace(player.getStructure(i).getUnitSpace()+2);
