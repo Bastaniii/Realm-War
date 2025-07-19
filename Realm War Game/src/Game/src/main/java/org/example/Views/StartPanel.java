@@ -70,4 +70,36 @@ public class StartPanel extends JPanel {
                 GameLogger.log("Error while opening new game dialog: " + ex.getMessage());
             }
         });
-    }}
+        loadGame = new JButton("Load Game");
+        loadGame.setOpaque(true);
+        loadGame.setBackground(new Color(173,216,230));
+        loadGame.setFont(new Font("Arial",Font.BOLD,15));
+        loadGame.setForeground(Color.BLACK);
+        loadGame.setPreferredSize(buttonSize);
+        loadGame.setMaximumSize(buttonSize);
+        loadGame.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel,BoxLayout.X_AXIS));
+        buttonPanel.setBackground(new Color(144, 238, 144));
+        buttonPanel.setOpaque(true);
+        buttonPanel.add(Box.createHorizontalGlue());
+        buttonPanel.add(newGame);
+        buttonPanel.add(Box.createHorizontalStrut(50)); // فاصله بین دکمه‌ها
+        buttonPanel.add(loadGame);
+        buttonPanel.add(Box.createHorizontalGlue());
+        add(buttonPanel, BorderLayout.CENTER);
+    }
+    public JButton getButton1Start(){
+        return button1;
+    }
+    public JButton getButton2Start(){
+        return button2;
+    }
+    public JButton getButton3Start(){
+        return button3;
+    }
+    public JDialog getStart(){
+        return start;
+    }
+}
