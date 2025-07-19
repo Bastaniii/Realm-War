@@ -563,7 +563,7 @@ public class GameManager {
             player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
         }
     }
-    public class hih {
+
         //buy and place unit
         public boolean canBuyFrom(int x, int y,int unitLevel){
             if(unitLevel==1 || unitLevel==2){
@@ -708,7 +708,7 @@ public class GameManager {
             }
             GameBoard.gameBoard[secondX][secondY].getUnit().setHasMoved(true);
         }
-    }
+
 
 
 

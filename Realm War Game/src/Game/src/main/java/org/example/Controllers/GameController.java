@@ -1,5 +1,4 @@
 package src.Game.src.main.java.org.example.Controllers;
-import src.Game.src.main.java.org.example.Models.GameBoard;
 import src.Game.src.main.java.org.example.Models.GameManager;
 import src.Game.src.main.java.org.example.Utils.GameLogger;
 import src.Game.src.main.java.org.example.Views.ActionPanel;
@@ -666,5 +665,270 @@ public class GameController extends Container {
     public void knightButton(){
         this.newUnit=4;
         actionPanel.getUnit().dispose();
+    }
+    private void addBoard(){
+        for(int i=0; i<20;i++){
+            for(int j=0; j<20; j++){
+                board.getButton(i,j).addActionListener(boardAction());
+            }
+        }
+    }
+    private ActionListener boardAction(){
+        return e -> {
+            try{
+                JButton click=(JButton)e.getSource();
+                int i=(int)click.getClientProperty("i");
+                int j=(int)click.getClientProperty("j");
+                if(isValid(i) && isValid(j)){
+                    GameLogger.log("Invalid click on tile (" + i + "," + j + ")");
+                    if(attackMode){
+                        if(AttackerX==-1 && AttackerY==-1){
+                            if(!gameManager.getTile(i,j).getUnit().isHasAttacked()){
+                                gameManager.showAttackablePlace(gameManager.whoseTurn(),i,j);
+                                if(gameManager.canAttack()){
+                                    AttackerX=i;
+                                    AttackerY=j;
+                                    GameLogger.log("Player selected attacker at (" + i + "," + j + ")");
+                                }
+                                else{
+                                    JOptionPane.showMessageDialog(null,"You're not able to attack!","Warning",JOptionPane.WARNING_MESSAGE);
+                                }
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"This unit has already attacked","Warning",JOptionPane.WARNING_MESSAGE);
+                            }
+
+                        }
+                        else if(AttackerX!=-1 && AttackerY!=-1){
+                            if(gameManager.canAttackThis(i,j)){
+                                TargetX=i;
+                                TargetY=j;
+                                if(gameManager.getTile(i,j).hasStructure()){
+                                    if(gameManager.willSurviveStructure(AttackerX,AttackerY,TargetX,TargetY)){
+                                        gameManager.attackStructure(AttackerX,AttackerY,TargetX,TargetY);
+                                        GameLogger.log("Player attempting attack from (" + AttackerX + "," + AttackerY + ") to a structure (" + i + "," + j + ")");
+                                        refresh();
+                                    }
+                                    else{
+                                        gameManager.destroyStructure(TargetX,TargetY,AttackerX,AttackerY);
+                                        updateBoard(board, gameManager);
+                                        GameLogger.log("Player destroyed a structure (" + TargetX + "," + TargetY + ")");
+                                        refresh();
+
+                                    }
+
+                                }
+                                else if(gameManager.getTile(i,j).hasUnit()){
+                                    if(gameManager.willSurviveUnit(AttackerX,AttackerY,TargetX,TargetY)){
+                                        gameManager.attackUnit(AttackerX,AttackerY,TargetX,TargetY);
+                                        GameLogger.log("Player attempting attack from (" + AttackerX + "," + AttackerY + ") to a unit (" + i + "," + j + ")");
+                                        refresh();
+                                    }
+                                    else{
+                                        gameManager.dieUnit(TargetX,TargetY,AttackerX,AttackerY);
+                                        updateBoard(board, gameManager);
+                                        GameLogger.log("Player killd a unit (" + TargetX + "," + TargetY + ")");
+                                        refresh();
+                                    }
+                                }
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"You're not able to attack this block! Try again.","Warning",JOptionPane.WARNING_MESSAGE);
+                            }
+                        }
+                    }
+                    else if(mergeMode){
+                        if(firstX==-1 && firstY==-1){
+                            if(gameManager.getTile(i,j).hasUnit()){
+                                if(gameManager.getTile(i,j).getUnit().getOwner()==gameManager.whoseTurn().getPlayerNumber()){
+                                    if(gameManager.getTile(i,j).getUnit().getlevel()<4){
+                                        firstX=i;
+                                        firstY=j;
+                                    }
+                                    else{
+                                        JOptionPane.showMessageDialog(null,"This unit has the max level.","Warning",JOptionPane.WARNING_MESSAGE);
+                                    }
+                                }
+                                else{
+                                    JOptionPane.showMessageDialog(null,"It's not your Unit","Warning",JOptionPane.WARNING_MESSAGE);
+                                }
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"There's no unit here!","Warning",JOptionPane.WARNING_MESSAGE);
+                            }
+                        }
+                        else if(firstX!=-1 && firstY!=-1){
+                            if(gameManager.getTile(i,j).hasUnit()){
+                                if(gameManager.getTile(i,j).getUnit().getOwner()==gameManager.whoseTurn().getPlayerNumber()){
+                                    if(gameManager.getTile(i,j).getUnit().getlevel()<4){
+                                        if(gameManager.CanMerge(gameManager.whoseTurn(),firstX,firstY,i,j)){
+                                            secondX=i;
+                                            secondY=j;
+                                            gameManager.merge(gameManager.whoseTurn(),firstX,firstY,secondX,secondY);
+                                            updateBoard(board, gameManager);
+                                            GameLogger.log("Player attempting merge firs unit ("+firstX+","+firstY+")with second unit at (" + i + "," + j + ")");
+                                            refresh();
+                                        }
+                                        else{
+                                            JOptionPane.showMessageDialog(null,"You can't merge these units! try again.","Warning",JOptionPane.WARNING_MESSAGE);
+                                            refresh();
+                                        }
+                                    }
+                                    else{
+                                        JOptionPane.showMessageDialog(null,"This unit has the max level.","Warning",JOptionPane.WARNING_MESSAGE);
+                                    }
+                                }
+                                else {
+                                    JOptionPane.showMessageDialog(null,"It's not your Unit","Warning",JOptionPane.WARNING_MESSAGE);
+                                }
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"There's no unit here!","Warning",JOptionPane.WARNING_MESSAGE);
+                            }
+
+                        }
+                    }
+                    else if(moveMode){
+                        if(fromX==-1 && fromY==-1){
+                            if(gameManager.isThereUnit(i,j)){
+                                if(!gameManager.getTile(i,j).getUnit().isHasMoved()){
+                                    if(gameManager.isUnitMine(i,j,gameManager.whoseTurn())){
+                                        gameManager.whereToMove(i,j,gameManager.whoseTurn());
+                                        if(gameManager.canMove()){
+                                            fromX=i;
+                                            fromY=j;
+                                        }
+                                        else{
+                                            JOptionPane.showMessageDialog(null,"You're not able to move!","Warning",JOptionPane.WARNING_MESSAGE);
+                                        }
+                                    }
+                                    else{
+                                        JOptionPane.showMessageDialog(null,"It's not your Unit","Warning",JOptionPane.WARNING_MESSAGE);
+                                    }
+
+                                }
+                                else{
+                                    JOptionPane.showMessageDialog(null,"This unit has already moved.","Warning",JOptionPane.WARNING_MESSAGE);
+                                }
+
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"There's no unit!","Warning",JOptionPane.WARNING_MESSAGE);
+                            }
+
+                        }
+                        else if(fromX!=-1 && fromY!=-1){
+                            if(gameManager.canMoveTo(i,j)){
+                                toX=i;
+                                toY=j;
+                                gameManager.Move(fromX,fromY,toX, toY, gameManager.whoseTurn());
+                                updateBoard(board, gameManager);
+                                GameLogger.log("Player attempting move from (" + fromX + "," + fromY + ") to (" + i + "," + j + ")");
+                                refresh();
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"You're not able to go there!","Warning",JOptionPane.WARNING_MESSAGE);
+                            }
+                        }
+                    }
+                    else if(buyUnitMode){
+                        if(producerX==-1 && producerY==-1){
+                            if(gameManager.canAffordBuyingUnit(gameManager.whoseTurn(),newUnit)){
+                                if(gameManager.canBuyFrom(i,j,newUnit)){
+                                    producerX=i;
+                                    producerY=j;
+                                }
+                                else{
+                                    JOptionPane.showMessageDialog(null,"You can't buy unit from here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                }
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"You don't have enough gold!","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
+                            }
+                        }
+                        else if(producerX!=-1 && producerY!=-1){
+                            gameManager.whereToPlace(gameManager.whoseTurn());
+                            if(gameManager.canPlaceUnit()){
+                                if(gameManager.canPlaceUnitThere(i,j)){
+                                    newUnitX=i;
+                                    newUnitY=j;
+                                    gameManager.buyUnit(newUnit,gameManager.whoseTurn(),newUnitX,newUnitY,producerX,producerY);
+                                    updateBoard(board, gameManager);
+                                    GameLogger.log("Player has bought a unit with level"+newUnit+"(" + i + "," + j + ") from (" + producerX + "," + producerY + ")" );
+                                    refresh();
+                                }
+                                else{
+                                    JOptionPane.showMessageDialog(null,"You can't place unit here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                }
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"You can't place a new unit!","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
+                            }
+                        }
+                    }
+                    else if(buildStructureMode){
+                        if(!gameManager.HasMaxAmount(gameManager.whoseTurn(),newStructure)){
+                            if(gameManager.canAffordBuilding(newStructure,gameManager.whoseTurn())){
+                                gameManager.whereToBuildStructure(gameManager.whoseTurn(),newStructure);
+                                if(gameManager.canBuild(gameManager.whoseTurn())){
+                                    if(gameManager.canBuildHere(i,j)){
+                                        gameManager.buildStructure(i,j,gameManager.whoseTurn(),newStructure);
+                                        updateBoard(board, gameManager);
+                                        GameLogger.log("Player attempting to build " + newStructure + " at (" + i + "," + j + ")");
+                                        refresh();
+                                    }
+                                    else{
+                                        JOptionPane.showMessageDialog(null,"You can't build here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                    }
+                                }
+                                else{
+                                    JOptionPane.showMessageDialog(null,"You can't build this structure!","Warning",JOptionPane.WARNING_MESSAGE);
+                                }
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"You don't have enough gold!","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
+                            }
+
+                        }
+                        else{
+                            JOptionPane.showMessageDialog(null,"You already have the max amount","Warning",JOptionPane.WARNING_MESSAGE);
+                        }
+
+                    }
+                    else if(levelUpStructureMode){
+                        gameManager.whichToLevelUpStructure(gameManager.whoseTurn());
+                        if(gameManager.canLevelUpStructure(gameManager.whoseTurn())){
+                            if(gameManager.canLevelUpThis(i,j)){
+                                gameManager.levelUpStructure(i,j);
+                                GameLogger.log("Player attempting to level up structure at (" + i + "," + j + ")");
+                                refresh();
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"You can't level up this Structure!","Warning",JOptionPane.WARNING_MESSAGE);
+                            }
+                        }
+                        else{
+                            JOptionPane.showMessageDialog(null,"You can't level up any Structure.","Warning",JOptionPane.WARNING_MESSAGE);
+                        }
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null,"You haven't enabled any Action!","Warning",JOptionPane.WARNING_MESSAGE);
+                    }
+
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Not valid input", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            catch (Exception ex){
+                GameLogger.log("Unexpected error in boardAction: "+ ex.getMessage());
+                JOptionPane.showMessageDialog(null,"Unexpected error in action","Error",JOptionPane.ERROR_MESSAGE);
+            }
+
+
+        };
     }
 }
