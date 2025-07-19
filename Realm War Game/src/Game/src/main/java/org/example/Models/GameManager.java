@@ -660,26 +660,29 @@ public class GameManager {
         public boolean isUnitMine(int x, int y,Player player){
             return getTile(x,y).getBlock().getOwner()==player.getPlayerNumber();
         }
-        public void whereToMove(int UnitX,int UnitY,Player player){
-            for(int i=1;i<19;i++){
-                for(int j=1;j<19;j++){
-                    if(getTile(i,j).getBlock().getOwner()==player.getPlayerNumber()&&!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
+    public void whereToMove(int UnitX,int UnitY,Player player){
+        for(int i=1;i<19;i++){
+            for(int j=1;j<19;j++){
+                if(getTile(i,j).getBlock().getOwner()==player.getPlayerNumber()&&!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
+                    GameBoard.gameBoard[i][j].setMovable(true);
+                }
+            }
+        }
+        int moveRange= GameBoard.gameBoard[UnitX][UnitY].getUnit().getMovementRange();
+        for(int i=UnitX-moveRange;i<UnitX+moveRange;i++){
+            for(int j=UnitY-moveRange;j<UnitY+moveRange;j++){
+                if(0<=i && i<19 && 0<=j && j<19){
+                    if(!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
                         GameBoard.gameBoard[i][j].setMovable(true);
                     }
                 }
-            }
-            int moveRange= GameBoard.gameBoard[UnitX][UnitY].getUnit().getMovementRange();
-            for(int i=UnitX-moveRange;i<UnitX+moveRange;i++){
-                for(int j=UnitY-moveRange;j<UnitY+moveRange;j++){
-                    if(!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit())
-                        if(0<=i && i<19 && 0<=j && j<19){
-                            GameBoard.gameBoard[i][j].setMovable(true);
-                        }
 
-                }
+
+
             }
-            GameBoard.gameBoard[UnitX][UnitY].setMovable(false);
         }
+        GameBoard.gameBoard[UnitX][UnitY].setMovable(false);
+    }
         public boolean canMoveTo(int x, int y){
             if(GameBoard.gameBoard[x][y].getMovable()){
                 return true;
