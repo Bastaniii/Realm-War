@@ -1,5 +1,6 @@
 package src.Game.src.main.java.org.example.Controllers;
 import src.Game.src.main.java.org.example.Models.GameManager;
+import src.Game.src.main.java.org.example.Utils.GameLogger;
 import src.Game.src.main.java.org.example.Views.ActionPanel;
 import src.Game.src.main.java.org.example.Views.InfoPanel;
 import src.Game.src.main.java.org.example.Views.StartPanel;
@@ -118,4 +119,104 @@ public class GameController extends Container {
     private int timeLeft= duration;
     protected int loser;
     protected int winner;
-    protected boolean endGame;}
+    protected boolean endGame;
+
+    public GameController(){
+        rightPanel=new JPanel();
+        rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.Y_AXIS));
+        rightPanel.setPreferredSize(new Dimension(300, 850));
+        this.attackMode=false;
+        this.AttackerX=-1;
+        this.AttackerY=-1;
+        this.TargetX=-1;
+        this.TargetY=-1;
+        this.moveMode=false;
+        this.fromX=-1;
+        this.fromY=-1;
+        this.toX=-1;
+        this.toY=-1;
+        this.mergeMode=false;
+        this.firstX=-1;
+        this.firstY=-1;
+        this.secondX=-1;
+        this.secondY=-1;
+        this.buyUnitMode=false;
+        this.unitX=-1;
+        this.unitY=-1;
+        this.levelUpStructureMode=false;
+        this.levelUpX=-1;
+        this.levelUpY=-1;
+        this.buildStructureMode=false;
+        this.structureX=-1;
+        this.structureY=-1;
+        this.newUnit=-1;
+        this.newStructure="";
+        this.producerX=-1;
+        this.producerY=-1;
+        this.newUnitX=-1;
+        this.newUnitY=-1;
+        this.endGame=false;
+        this.loser=-1;
+        this.winner=-1;
+        FirstUI();
+
+
+    }
+    public void StartTurn() {
+        try {
+            if (timer != null) {
+                timer.stop();
+                timer = null;
+            }
+            timeLeft=duration;
+            infoPanel.update(gameManager.whoseTurn());
+            GameLogger.log("Player " + gameManager.whoseTurn().getPlayerNumber() + "'s turn started.");
+            timer=new Timer(1000,e ->  {
+                timeLeft--;
+                infoPanel.updateTimer(timeLeft);
+                if(timeLeft<=0){
+                    GameLogger.log("Player " + gameManager.whoseTurn().getPlayerNumber() + "'s turn timed out.");
+                    endTurn();
+                }
+            });
+            timer.start();
+        }
+        catch (Exception ex){
+            GameLogger.log("Error while starting turn: "+ ex.getMessage());
+        }
+
+    }
+    public void endTurn(){
+        try{  if(timer!=null&& timer.isRunning()){
+            timer.stop();
+            GameLogger.log("Player " + gameManager.whoseTurn().getPlayerNumber() + " ended turn.");
+        }
+            gameManager.refreshPlayer(gameManager.getPlayers());
+            gameManager.player(gameManager.getPlayers());
+            gameManager.check(gameManager.getPlayers());
+            gameManager.getPlayerTurn().update();
+            if(!gameManager.getPlayerTurn().getLosers().isEmpty()){
+                this.loser=gameManager.getPlayerTurn().Loser().getPlayerNumber();
+                GameLogger.log("Player " + loser + " has lost.");
+                JOptionPane.showMessageDialog(null,"Player "+loser+" has lost.","Warning",JOptionPane.WARNING_MESSAGE);
+                gameManager.getPlayerTurn().removeLoser(gameManager.getPlayerTurn().Loser());
+            }
+            if(gameManager.endGame(gameManager.getPlayers())){
+                this.endGame=true;
+                this.winner=gameManager.winner(gameManager.getPlayers()).getPlayerNumber();
+                GameLogger.log("Player " + winner + " has won.");
+                JOptionPane.showMessageDialog(null,"Player "+winner+" has won.","Warning",JOptionPane.WARNING_MESSAGE);
+                FirstUI();
+            }
+            if(!endGame){
+                gameManager.getPlayerTurn().nextTurn();
+                StartTurn();
+            }
+        }catch(Exception e){
+            GameLogger.log("Error in endTurn "+ e.getMessage());
+            JOptionPane.showMessageDialog(null,"Unexpected error in End Turn "+ e.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+        }
+
+
+    }
+}
