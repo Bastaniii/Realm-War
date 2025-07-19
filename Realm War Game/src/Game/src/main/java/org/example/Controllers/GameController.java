@@ -1,4 +1,5 @@
 package src.Game.src.main.java.org.example.Controllers;
+import src.Game.src.main.java.org.example.Models.GameBoard;
 import src.Game.src.main.java.org.example.Models.GameManager;
 import src.Game.src.main.java.org.example.Utils.GameLogger;
 import src.Game.src.main.java.org.example.Views.ActionPanel;
@@ -8,6 +9,7 @@ import src.Game.src.main.java.org.example.Views.GameView;
 import src.Game.src.main.java.org.example.Views.GameBoardPanel;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class GameController extends Container {
@@ -315,5 +317,354 @@ public class GameController extends Container {
     public void button3(){
         this.players=4;
         firstButtons();
+    }
+    private void secondUI(){
+        game.getContentPane().removeAll();
+        game.setLayout(new BorderLayout(0,0));
+        game.add(board,BorderLayout.CENTER);
+        game.add(rightPanel,BorderLayout.EAST);
+        game.revalidate();
+        game.repaint();
+
+    }
+    public void updateBoard(GameBoardPanel board, GameManager gameManager){
+        try{
+            for(int i=0; i<20; i++){
+                for(int j=0; j<20; j++){
+                    if(gameManager.getTile(i,j).getBlock().getOwner()==1){
+                        if(gameManager.getTile(i,j).hasStructure()){
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Barrack")){
+                                board.getButton(i,j).setIcon(Barrack1);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Farm")){
+                                board.getButton(i,j).setIcon(Farm1);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Market")){
+                                board.getButton(i,j).setIcon(Market1);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Tower")){
+                                board.getButton(i,j).setIcon(Tower1);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("TownHall")){
+                                board.getButton(i,j).setIcon(TownHall1);
+                            }
+                        }
+                        else{
+                            if(gameManager.getTile(i,j).hasUnit()){
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==1){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Peasant1Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Peasant1);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==2){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Spearman1Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Spearman1);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==3){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Swordman1Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Swordman1);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==4){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(knight1Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(knight1);
+                                    }
+                                }
+                            }
+                            else{
+                                if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                    board.getButton(i,j).setIcon(Forest1nothing);
+                                }
+                                else{
+                                    board.getButton(i,j).setIcon(Empty1nothing);
+                                }
+
+                            }
+                        }
+                    }
+                    else if(gameManager.getTile(i,j).getBlock().getOwner()==2){
+                        if(gameManager.getTile(i,j).hasStructure()){
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Barrack")){
+                                board.getButton(i,j).setIcon(Barrack2);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Farm")){
+                                board.getButton(i,j).setIcon(Farm2);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Market")){
+                                board.getButton(i,j).setIcon(Market2);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Tower")){
+                                board.getButton(i,j).setIcon(Tower2);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("TownHall")){
+                                board.getButton(i,j).setIcon(TownHall2);
+                            }
+                        }
+                        else{
+                            if(gameManager.getTile(i,j).hasUnit()){
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==1){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Peasant2Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Peasant2);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==2){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Spearman2Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Spearman2);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==3){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Swordman2Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Swordman2);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==4){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(knight2Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(knight2);
+                                    }
+                                }
+                            }
+                            else{
+                                if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                    board.getButton(i,j).setIcon(Forest2nothing);
+                                }
+                                else{
+                                    board.getButton(i,j).setIcon(Empty2nothing);
+                                }
+
+                            }
+                        }
+                    }
+                    else if(gameManager.getTile(i,j).getBlock().getOwner()==3){
+                        if(gameManager.getTile(i,j).hasStructure()){
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Barrack")){
+                                board.getButton(i,j).setIcon(Barrack3);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Farm")){
+                                board.getButton(i,j).setIcon(Farm3);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Market")){
+                                board.getButton(i,j).setIcon(Market3);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Tower")){
+                                board.getButton(i,j).setIcon(Tower3);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("TownHall")){
+                                board.getButton(i,j).setIcon(TownHall3);
+                            }
+                        }
+                        else{
+                            if(gameManager.getTile(i,j).hasUnit()){
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==1){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Peasant3Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Peasant3);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==2){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Spearman3Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Spearman3);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==3){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Swordman3Forest); }
+                                    else {
+                                        board.getButton(i,j).setIcon(Swordman3);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==4){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(knight3Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(knight3);
+                                    }
+                                }
+                            }
+                            else{
+                                if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                    board.getButton(i,j).setIcon(Forest3nothing);
+                                }
+                                else{
+                                    board.getButton(i,j).setIcon(Empty3nothing);
+                                }
+
+                            }
+                        }
+                    }
+                    else if(gameManager.getTile(i,j).getBlock().getOwner()==4){
+                        if(gameManager.getTile(i,j).hasStructure()){
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Barrack")){
+                                board.getButton(i,j).setIcon(Barrack4);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Farm")){
+                                board.getButton(i,j).setIcon(Farm4);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Market")){
+                                board.getButton(i,j).setIcon(Market4);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("Tower")){
+                                board.getButton(i,j).setIcon(Tower4);
+                            }
+                            if(gameManager.getTile(i,j).getStructure().getType().equals("TownHall")){
+                                board.getButton(i,j).setIcon(TownHall4);
+                            }
+                        }
+                        else{
+                            if(gameManager.getTile(i,j).hasUnit()){
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==1){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Peasant4Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Peasant4);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==2){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Spearman4Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Spearman4);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==3){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(Swordman4Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(Swordman4);
+                                    }
+                                }
+                                if(gameManager.getTile(i,j).getUnit().getlevel()==4){
+                                    if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                        board.getButton(i,j).setIcon(knight4Forest);
+                                    }
+                                    else {
+                                        board.getButton(i,j).setIcon(knight4);
+                                    }
+                                }
+                            }
+                            else{
+                                if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                                    board.getButton(i,j).setIcon(Forest4nothing);
+                                }
+                                else{
+                                    board.getButton(i,j).setIcon(Empty4nothing);
+                                }
+
+                            }
+                        }
+                    }
+                    else if(gameManager.getTile(i,j).getBlock().getOwner()==0){
+                        if(gameManager.getTile(i,j).getBlock().getType().equals("Void")){
+                            board.getButton(i,j).setBackground(Color.BLACK);
+                        }
+                        if(gameManager.getTile(i,j).getBlock().getType().equals("Empty")){
+                            board.getButton(i,j).setIcon(EmptyNoOwner);
+                        }
+                        else if(gameManager.getTile(i,j).getBlock().getType().equals("Forest")){
+                            board.getButton(i,j).setIcon(ForestNoOwner);
+                        }
+                    }
+                }
+            }
+            GameLogger.log("Board updated for Player " + gameManager.whoseTurn().getPlayerNumber());
+        }
+        catch (Exception e){
+            GameLogger.log("Error in updateBoard "+ e.getMessage());
+        }
+
+    }
+    public void attack(){
+        refresh();
+        this.attackMode=true;
+    }
+    public void move(){
+        refresh();
+        this.moveMode=true;
+    }
+    public void merge(){
+        refresh();
+        this.mergeMode=true;
+    }
+    public void levelUp(){
+        refresh();
+        this.levelUpStructureMode=true;
+    }
+    private ActionListener buyNewUnit(){
+        return e -> {
+            refresh();
+            this.buyUnitMode=true;
+            actionPanel.newUnit();
+
+        };
+    }
+    public void buildNewStructure(){
+        refresh();
+        this.buildStructureMode=true;
+        actionPanel.newStructure();
+    }
+    public void barrackButton(){
+        this.newStructure="Barrack";
+        actionPanel.getStructure().dispose();
+    }
+    public void farmButton(){
+        this.newStructure="Farm";
+        actionPanel.getStructure().dispose();
+    }
+    public void marketButton(){
+        this.newStructure="Market";
+        actionPanel.getStructure().dispose();
+    }
+    public void towerButton(){
+        this.newStructure="Tower";
+        actionPanel.getStructure().dispose();
+    }
+    public void peasantButton(){
+        this.newUnit=1;
+        actionPanel.getUnit().dispose();
+    }
+    public void spearmanButton(){
+        this.newUnit=2;
+        actionPanel.getUnit().dispose();
+    }
+    public void swordmanButton(){
+        this.newUnit=3;
+        actionPanel.getUnit().dispose();
+    }
+    public void knightButton(){
+        this.newUnit=4;
+        actionPanel.getUnit().dispose();
     }
 }
