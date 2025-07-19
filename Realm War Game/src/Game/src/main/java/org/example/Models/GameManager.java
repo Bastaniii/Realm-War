@@ -563,6 +563,152 @@ public class GameManager {
             player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
         }
     }
+    public class hih {
+        //buy and place unit
+        public boolean canBuyFrom(int x, int y,int unitLevel){
+            if(unitLevel==1 || unitLevel==2){
+                if(1<=GameBoard.gameBoard[x][y].getStructure().getUnitSpace()){
+                    return true;
+                }
+                return false;
+            }
+            if(unitLevel==3||unitLevel==4){
+                if(2<=GameBoard.gameBoard[x][y].getStructure().getUnitSpace()){
+                    return true;
+                }
+                return false;
+            }
+            return false;
+        }
+        public boolean canAffordBuyingUnit(Player player,int unitLevel){
+            if(unitLevel==1){
+                if(5<=player.getPlayerGold()){
+                    return true;
+                }
+                return false;
+            }
+            if(unitLevel==2){
+                if(10<=player.getPlayerGold()){
+                    return true;
+                }
+                return false;
+            }
+            if(unitLevel==3){
+                if(20<=player.getPlayerGold()){
+                    return true;
+                }
+                return false;
+            }
+            if(unitLevel==4){
+                if(30<=player.getPlayerGold()){
+                    return true;
+                }
+                return false;
+            }
+            return false;
+        }
+        public void whereToPlace(Player player){
+            for(int i=1;i<19;i++){
+                for(int j=1;j<19;j++){
+                    if(GameBoard.gameBoard[i][j].getBlock().getOwner()==player.getPlayerNumber()&& !GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
+                        GameBoard.gameBoard[i][j].setPlaceUnit(true);
+                    };
+                }
+            }
+        }
+        public boolean canPlaceUnit(){
+            int count=0;
+            for(int i=1;i<=19;i++){
+                for(int j=1;j<=19;j++){
+                    if(GameBoard.gameBoard[i][j].canPlaceUnit()){
+                        count++;
+                    }
+                }
+            }
+            if(count!=0){
+                return true;
+            }
+            return false;
+        }
+        public boolean canPlaceUnitThere(int x, int y){
+            if(GameBoard.gameBoard [x][y].canPlaceUnit()){
+                return true;
+            }
+            return false;
+        }
+        public void buyUnit(int unitLevel,Player player,int UnitX,int UnitY,int producerX,int producerY){
+            if(unitLevel==1){
+                GameBoard.gameBoard[UnitX][UnitY].setUnit(new Peasant(player.getPlayerNumber(),GameBoard.gameBoard[producerX][producerY].getStructure().getProduceNum()));
+            }
+            if(unitLevel==2){
+                GameBoard.gameBoard[UnitX][UnitY].setUnit(new Spearman(player.getPlayerNumber(),GameBoard.gameBoard[producerX][producerY].getStructure().getProduceNum()));
+            }
+            if(unitLevel==3){
+                GameBoard.gameBoard[UnitX][UnitY].setUnit(new Swordman(player.getPlayerNumber(),GameBoard.gameBoard[producerX][producerY].getStructure().getProduceNum()));
+            }
+            if(unitLevel==4){
+                GameBoard.gameBoard[UnitX][UnitY].setUnit(new Knight(player.getPlayerNumber(),GameBoard.gameBoard[producerX][producerY].getStructure().getProduceNum()));
+            }
+            player.setplayerGold(player.getPlayerGold()-GameBoard.gameBoard[UnitX][UnitY].getUnit().getBuyCost());
+            player.addUnit(GameBoard.gameBoard[UnitX][UnitY].getUnit());
+            GameBoard.gameBoard[producerX][producerY].getStructure().setUnitSpace(GameBoard.gameBoard[producerX][producerY].getStructure().getUnitSpace()-GameBoard.gameBoard[UnitX][UnitY].getUnit().getUnitSpace());
+        }
+        // move and add kingdom
+        public boolean isThereUnit(int x, int y){
+            return getTile(x,y).hasUnit();
+        }
+        public boolean isUnitMine(int x, int y,Player player){
+            return getTile(x,y).getBlock().getOwner()==player.getPlayerNumber();
+        }
+        public void whereToMove(int UnitX,int UnitY,Player player){
+            for(int i=1;i<19;i++){
+                for(int j=1;j<19;j++){
+                    if(getTile(i,j).getBlock().getOwner()==player.getPlayerNumber()&&!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
+                        GameBoard.gameBoard[i][j].setMovable(true);
+                    }
+                }
+            }
+            int moveRange= GameBoard.gameBoard[UnitX][UnitY].getUnit().getMovementRange();
+            for(int i=UnitX-moveRange;i<UnitX+moveRange;i++){
+                for(int j=UnitY-moveRange;j<UnitY+moveRange;j++){
+                    if(!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit())
+                        if(0<=i && i<19 && 0<=j && j<19){
+                            GameBoard.gameBoard[i][j].setMovable(true);
+                        }
+
+                }
+            }
+            GameBoard.gameBoard[UnitX][UnitY].setMovable(false);
+        }
+        public boolean canMoveTo(int x, int y){
+            if(GameBoard.gameBoard[x][y].getMovable()){
+                return true;
+            }
+            return false;
+        }
+        public boolean canMove(){
+            int count=0;
+            for(int i=1;i<=19;i++){
+                for(int j=1;j<=19;j++){
+                    if(GameBoard.gameBoard[i][j].getMovable()){
+                        count++;
+                    }
+                }
+            }
+            if(count!=0){
+                return true;
+            }
+            return false;
+        }
+        public void Move(int firstX,int firstY,int secondX,int secondY ,Player player ){
+            GameBoard.gameBoard[secondX][secondY].setUnit(GameBoard.gameBoard[firstX][firstY].getUnit());
+            GameBoard.gameBoard[firstX][firstY].setUnit(null);
+            if(GameBoard.gameBoard[secondX][secondY].getBlock().getOwner()!=player.getPlayerNumber()){
+                GameBoard.gameBoard[secondX][secondY].getBlock().setOwner(player.getPlayerNumber());
+            }
+            GameBoard.gameBoard[secondX][secondY].getUnit().setHasMoved(true);
+        }
+    }
 
 
 
