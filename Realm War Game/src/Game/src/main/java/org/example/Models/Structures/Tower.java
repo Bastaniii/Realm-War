@@ -3,19 +3,16 @@ package src.Game.src.main.java.org.example.Models.Structures;
 //import src.Game.src.main.java.org.example.Models.units.Unit1;
 import src.Game.src.main.java.org.example.Models.units.Unit1;
 
-public class Tower extends Structure1 {
-    public Tower(){
-        super(1,4,25,5,5,5);
+public class Tower extends Structure1{
+    public Tower(int owner){
+        super(1,3,60,3,10,10,owner,"Tower",5,0,1,0,0,0);
     }
-    public void upGrade(Tower tower){
-        tower.setLevel(tower.getLevel()+1);
-        tower.setHitPoint(tower.getHitPoint()+5);
-        tower.setLevelUpCost(tower.getLevelUpCost()+5);
+    public void upgrade(){
+        setLevel(getLevel()+1);
+        setMaintenanceCost(getMaintenanceCost()+1);
+        setLevelUpCost(getLevelUpCost()+5);
+        setHitPoint(getHitPoint()+20);
+        setDefenceRange(getDefenceRange()+1);
     }
-    public boolean restrict(Tower tower, Unit1 units) {
-        if (units.getlevel() <= tower.getLevel()) {
-            return true;
-        }
-        return false;
-    }
+
 }

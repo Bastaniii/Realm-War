@@ -2,40 +2,21 @@ package src.Game.src.main.java.org.example.Models.Structures;
 
 import src.Game.src.main.java.org.example.Models.units.Unit1;
 
-public class TownHall extends Structure1  {
-    protected int unitSpace;
-    protected int food;
-    protected int gold;
-    public TownHall() {
-        super(1, 1, 25, 0, 0,0);
-        this.unitSpace = 10;
-        this.food = 5;
-        this.gold = 5;
+public class TownHall extends Structure1 {
+    protected boolean isDefeated;
+    public TownHall(int owner) {
+        super(1, 1, 100, 0, 0,0,owner,"TownHall",1,5,0,5,5 ,1);
+        this.isDefeated = false;
     }
-    public int getFood(){
-        return this.food;
+    public void setDefeated (boolean isDefeated) {
+        this.isDefeated = isDefeated;
     }
-    public int getGold(){
-        return this.gold;
+    public boolean isDefeated () {
+        return isDefeated;
     }
-    public int getUnitSpace() {
-        return unitSpace;
-    }
-    public void setUnitSpace(int unitspace) {
-        this.unitSpace = unitspace;
-    }
-    public boolean isFull(TownHall townHall) {
-        return townHall.getUnitSpace() ==0;
-    }
-    public boolean canAddUnit(TownHall townHall, Unit1 unit) {
-        return unit.getUnitSpace()<townHall.getUnitSpace();
-    }
-    public void addUnit (TownHall townHall, Unit1 unit) {
-        if (canAddUnit(townHall, unit)) {
-            setUnitSpace(townHall.getUnitSpace()-unit.getUnitSpace());
-        }
-    }
-    public void removeUnit(TownHall townHall, Unit1 unit) {
-        townHall.setUnitSpace(townHall.getUnitSpace()+unit.getUnitSpace());
+
+    @Override
+    public void upgrade() {
+
     }
 }
