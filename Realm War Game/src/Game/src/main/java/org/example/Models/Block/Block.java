@@ -11,24 +11,19 @@ public abstract class Block {
     protected int gold;
     protected int food;
     protected boolean hasBuilt;
-    public Block(int x, int y) {
-        this.x = x;
-        this.y = y;
+
+    public Block(int food, int gold) {
         this.hasOwner = false;
         this.owner = 0;
         this.hasBuilt = false;
-    }
-    public int getX() {
-        return x;
-    }
-    public int getY() {
-        return y;
-    }
-    public boolean hasOwner() {
-        return hasOwner;
+        this.food = food;
+        this.gold = gold;
     }
     public int getOwner() {
         return owner;
+    }
+    public void setOwner(int owner) {
+        this.owner = owner;
     }
     public String getType() {
         return type;
@@ -39,15 +34,6 @@ public abstract class Block {
     public int getFood() {
         return food;
     }
-    public void changeOwner(int newOwner) {
-        hasOwner = true;
-        owner = newOwner;
-    }
-    public void build(){
-        hasBuilt = true;
-    }
-    public boolean canBuild() {
-        return !hasBuilt;
-    }
+
 }
 
