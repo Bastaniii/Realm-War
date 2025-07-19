@@ -1,12 +1,13 @@
 package src.Game.src.main.java.org.example.Models;
 
 import src.Game.src.main.java.org.example.Models.Block.Block;
+import src.Game.src.main.java.org.example.Models.Structures.Structure1;
 import src.Game.src.main.java.org.example.Models.Structures.Structures;
 import src.Game.src.main.java.org.example.Models.units.Unit1;
 
 public class Tile {
     protected Block block;
-    protected Structures structure;
+    protected Structure1 structure;
     protected Unit1 unit;
     protected boolean movable;
     protected boolean placeUnit;
@@ -64,7 +65,7 @@ public class Tile {
     public Block getBlock() {
         return block;
     }
-    public Structures getStructure() {
+    public Structure1 getStructure() {
         return structure;
     }
     public Unit1 getUnit() {
@@ -73,7 +74,7 @@ public class Tile {
     public void setBlock(Block block) {
         this.block = block;
     }
-    public void setStructure(Structures structure) {
+    public void setStructure(Structure1 structure) {
         this.structure = structure;
     }
     public void setUnit(Unit1 unit) {
