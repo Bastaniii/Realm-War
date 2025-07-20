@@ -28,5 +28,7 @@ public class StructureSelectorPanel extends JPanel {
 
     public void setSelectedStructureType(String type) {
         structureSelector.setSelectedItem(type);
-    }
+            }
+
+
 }
