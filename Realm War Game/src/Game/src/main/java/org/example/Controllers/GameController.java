@@ -175,6 +175,7 @@ public class GameController extends Container {
             timer=new Timer(1000,e ->  {
                 timeLeft--;
                 infoPanel.updateTimer(timeLeft);
+                gameManager.getPlayerTurn().update();
                 if(!gameManager.getPlayerTurn().getLosers().isEmpty()){
                     this.loser=gameManager.getPlayerTurn().Loser().getPlayerNumber();
                     GameLogger.log("Player " + loser + " has lost.");
@@ -187,6 +188,8 @@ public class GameController extends Container {
                     this.winner=gameManager.winner(gameManager.getPlayers()).getPlayerNumber();
                     GameLogger.log("Player " + winner + " has won.");
                     JOptionPane.showMessageDialog(null,"Player "+winner+" has won.","Warning",JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"End Game","END",JOptionPane.INFORMATION_MESSAGE);
+                    GameLogger.log("end game");
 
 
                     if (timer != null && timer.isRunning()) {
@@ -199,6 +202,7 @@ public class GameController extends Container {
                     game.setContentPane(new StartPanel());
                     game.revalidate();
                     game.repaint();
+                    return;
                 }
                 if(timeLeft<=0){
                     GameLogger.log("Player " + gameManager.whoseTurn().getPlayerNumber() + "'s turn timed out.");
@@ -220,7 +224,6 @@ public class GameController extends Container {
             gameManager.refreshPlayer(gameManager.getPlayers());
             gameManager.player(gameManager.getPlayers());
             gameManager.check(gameManager.getPlayers());
-            gameManager.getPlayerTurn().update();
             gameManager.getPlayerTurn().nextTurn();
             StartTurn();
 
