@@ -9,5 +9,6 @@ import java.util.Objects;
 public class Main {
     public static void main(String[] args) {
         GameController gameController = new GameController();
+        System.out.println("Hello World!");
     }
     }

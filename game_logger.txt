@@ -1269,3 +1269,6 @@
 [2025/07/20 03:55:36]Board updated for Player 1
 [2025/07/20 03:55:36]Player attempting merge firs unit (2,16)with second unit at (3,16)
 [2025/07/20 03:55:38]Invalid click on tile (4,16)
+[2025/07/20 18:31:59]New Game clicked - showing player selection dialog
+[2025/07/20 18:32:01]Board updated for Player 1
+[2025/07/20 18:32:01]Player 1's turn started.
