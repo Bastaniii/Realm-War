@@ -175,6 +175,31 @@ public class GameController extends Container {
             timer=new Timer(1000,e ->  {
                 timeLeft--;
                 infoPanel.updateTimer(timeLeft);
+                if(!gameManager.getPlayerTurn().getLosers().isEmpty()){
+                    this.loser=gameManager.getPlayerTurn().Loser().getPlayerNumber();
+                    GameLogger.log("Player " + loser + " has lost.");
+                    JOptionPane.showMessageDialog(null,"Player "+loser+" has lost.","Warning",JOptionPane.WARNING_MESSAGE);
+                    gameManager.getPlayerTurn().removeLoser(gameManager.getPlayerTurn().Loser());
+                }
+                if(gameManager.endGame(gameManager.getPlayers())){
+                    this.endGame=true;
+                    timer.stop();
+                    this.winner=gameManager.winner(gameManager.getPlayers()).getPlayerNumber();
+                    GameLogger.log("Player " + winner + " has won.");
+                    JOptionPane.showMessageDialog(null,"Player "+winner+" has won.","Warning",JOptionPane.WARNING_MESSAGE);
+
+
+                    if (timer != null && timer.isRunning()) {
+                        timer.stop();
+                    }
+
+                    game.remove(board);
+                    game.remove(rightPanel);
+                    disposeGame();
+                    game.setContentPane(new StartPanel());
+                    game.revalidate();
+                    game.repaint();
+                }
                 if(timeLeft<=0){
                     GameLogger.log("Player " + gameManager.whoseTurn().getPlayerNumber() + "'s turn timed out.");
                     endTurn();
@@ -196,29 +221,90 @@ public class GameController extends Container {
             gameManager.player(gameManager.getPlayers());
             gameManager.check(gameManager.getPlayers());
             gameManager.getPlayerTurn().update();
-            if(!gameManager.getPlayerTurn().getLosers().isEmpty()){
-                this.loser=gameManager.getPlayerTurn().Loser().getPlayerNumber();
-                GameLogger.log("Player " + loser + " has lost.");
-                JOptionPane.showMessageDialog(null,"Player "+loser+" has lost.","Warning",JOptionPane.WARNING_MESSAGE);
-                gameManager.getPlayerTurn().removeLoser(gameManager.getPlayerTurn().Loser());
-            }
-            if(gameManager.endGame(gameManager.getPlayers())){
-                this.endGame=true;
-                this.winner=gameManager.winner(gameManager.getPlayers()).getPlayerNumber();
-                GameLogger.log("Player " + winner + " has won.");
-                JOptionPane.showMessageDialog(null,"Player "+winner+" has won.","Warning",JOptionPane.WARNING_MESSAGE);
-                FirstUI();
-            }
-            if(!endGame){
-                gameManager.getPlayerTurn().nextTurn();
-                StartTurn();
-            }
+            gameManager.getPlayerTurn().nextTurn();
+            StartTurn();
+
         }catch(Exception e){
             GameLogger.log("Error in endTurn "+ e.getMessage());
             JOptionPane.showMessageDialog(null,"Unexpected error in End Turn "+ e.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
         }
 
-
+    }
+    public void disposeGame() {
+        if (timer != null) {
+            timer.stop();
+            timer = null;
+        }
+        start=null;
+        board = null;
+        gameManager = null;
+        actionPanel=null;
+        infoPanel=null;
+        rightPanel = null;
+        ForestNoOwner = null;
+        EmptyNoOwner = null;
+        Empty1nothing = null;
+        Empty2nothing = null;
+        Empty3nothing = null;
+        Empty4nothing = null;
+        Forest1nothing = null;
+        Forest2nothing = null;
+        Forest3nothing = null;
+        Forest4nothing = null;
+        Barrack1 = null;
+        Barrack2 = null;
+        Barrack3 = null;
+        Barrack4 = null;
+        TownHall1 = null;
+        TownHall2 = null;
+        TownHall3 = null;
+        TownHall4 = null;
+        Tower1 = null;
+        Tower2 = null;
+        Tower3 = null;
+        Tower4 = null;
+        Farm1 = null;
+        Farm2 = null;
+        Farm3 = null;
+        Farm4 = null;
+        Market1 = null;
+        Market2 = null;
+        Market3 = null;
+        Market4 = null;
+        Peasant1 = null;
+        Peasant2 = null;
+        Peasant3 = null;
+        Peasant4 = null;
+        Spearman1 = null;
+        Spearman2 = null;
+        Spearman3 = null;
+        Spearman4 = null;
+        Swordman1 = null;
+        Swordman2 = null;
+        Swordman3 = null;
+        Swordman4 = null;
+        knight1 = null;
+        knight2 = null;
+        knight3 = null;
+        knight4 = null;
+        Peasant1Forest = null;
+        Peasant2Forest = null;
+        Peasant3Forest = null;
+        Peasant4Forest = null;
+        Spearman1Forest = null;
+        Spearman2Forest = null;
+        Spearman3Forest = null;
+        Spearman4Forest = null;
+        Swordman1Forest = null;
+        Swordman2Forest = null;
+        Swordman3Forest = null;
+        Swordman4Forest = null;
+        knight1Forest = null;
+        knight2Forest = null;
+        knight3Forest = null;
+        knight4Forest = null;
+        System.gc();
+        GameLogger.log("GameController resources disposed.");
     }
     private void FirstUI(){
         game=new GameView();
@@ -244,14 +330,6 @@ public class GameController extends Container {
         actionPanel.getBuildStructure().addActionListener(e -> buildNewStructure());
         actionPanel.getBuyUnit().addActionListener( buyNewUnit());
         actionPanel.getEndTurn().addActionListener(e ->  endTurn());
-        actionPanel.getBarrack().addActionListener(e -> barrackButton());
-        actionPanel.getFarm().addActionListener(e -> farmButton());
-        actionPanel.getMarket().addActionListener(e -> marketButton());
-        actionPanel.getTower().addActionListener(e -> towerButton());
-        actionPanel.getPeasant().addActionListener(e -> peasantButton());
-        actionPanel.getSpearman().addActionListener(e -> spearmanButton());
-        actionPanel.getSwordman().addActionListener(e -> swordmanButton());
-        actionPanel.getKnight().addActionListener(e -> knightButton());
         infoPanel=new InfoPanel();
         infoPanel.update(gameManager.whoseTurn());
         SwingUtilities.invokeLater(this::StartTurn);
@@ -299,11 +377,13 @@ public class GameController extends Container {
         this.structureX=-1;
         this.structureY=-1;
         this.newUnit=-1;
-        this.newStructure="";
+        this.newStructure=null;
         this.producerX=-1;
         this.producerY=-1;
         this.newUnitX=-1;
         this.newUnitY=-1;
+        actionPanel.getStructureSelector().setSelectedStructureType(null);// change
+        actionPanel.getUnitSelector().resetSelectedStructureId(-1);//
     }
     public void button1(){
         this.players=2;
@@ -621,51 +701,22 @@ public class GameController extends Container {
         refresh();
         this.levelUpStructureMode=true;
     }
-    private ActionListener buyNewUnit(){
+    private ActionListener buyNewUnit(){// change
         return e -> {
             refresh();
             this.buyUnitMode=true;
-            actionPanel.newUnit();
+
 
         };
     }
-    public void buildNewStructure(){
+    public void buildNewStructure(){// change
         refresh();
+        this.newStructure=null;
+
         this.buildStructureMode=true;
-        actionPanel.newStructure();
+
     }
-    public void barrackButton(){
-        this.newStructure="Barrack";
-        actionPanel.getStructure().dispose();
-    }
-    public void farmButton(){
-        this.newStructure="Farm";
-        actionPanel.getStructure().dispose();
-    }
-    public void marketButton(){
-        this.newStructure="Market";
-        actionPanel.getStructure().dispose();
-    }
-    public void towerButton(){
-        this.newStructure="Tower";
-        actionPanel.getStructure().dispose();
-    }
-    public void peasantButton(){
-        this.newUnit=1;
-        actionPanel.getUnit().dispose();
-    }
-    public void spearmanButton(){
-        this.newUnit=2;
-        actionPanel.getUnit().dispose();
-    }
-    public void swordmanButton(){
-        this.newUnit=3;
-        actionPanel.getUnit().dispose();
-    }
-    public void knightButton(){
-        this.newUnit=4;
-        actionPanel.getUnit().dispose();
-    }
+
     private void addBoard(){
         for(int i=0; i<20;i++){
             for(int j=0; j<20; j++){
@@ -692,10 +743,12 @@ public class GameController extends Container {
                                 }
                                 else{
                                     JOptionPane.showMessageDialog(null,"You're not able to attack!","Warning",JOptionPane.WARNING_MESSAGE);
+                                    refresh();
                                 }
                             }
                             else{
                                 JOptionPane.showMessageDialog(null,"This unit has already attacked","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
                             }
 
                         }
@@ -706,6 +759,7 @@ public class GameController extends Container {
                                 if(gameManager.getTile(i,j).hasStructure()){
                                     if(gameManager.willSurviveStructure(AttackerX,AttackerY,TargetX,TargetY)){
                                         gameManager.attackStructure(AttackerX,AttackerY,TargetX,TargetY);
+                                        JOptionPane.showMessageDialog(null,"You attacked!","Warning",JOptionPane.WARNING_MESSAGE);
                                         GameLogger.log("Player attempting attack from (" + AttackerX + "," + AttackerY + ") to a structure (" + i + "," + j + ")");
                                         refresh();
                                     }
@@ -721,19 +775,21 @@ public class GameController extends Container {
                                 else if(gameManager.getTile(i,j).hasUnit()){
                                     if(gameManager.willSurviveUnit(AttackerX,AttackerY,TargetX,TargetY)){
                                         gameManager.attackUnit(AttackerX,AttackerY,TargetX,TargetY);
+                                        JOptionPane.showMessageDialog(null,"You attacked!","Warning",JOptionPane.WARNING_MESSAGE);
                                         GameLogger.log("Player attempting attack from (" + AttackerX + "," + AttackerY + ") to a unit (" + i + "," + j + ")");
                                         refresh();
                                     }
                                     else{
                                         gameManager.dieUnit(TargetX,TargetY,AttackerX,AttackerY);
                                         updateBoard(board, gameManager);
-                                        GameLogger.log("Player killd a unit (" + TargetX + "," + TargetY + ")");
+                                        GameLogger.log("Player killed a unit (" + TargetX + "," + TargetY + ")");//
                                         refresh();
                                     }
                                 }
                             }
                             else{
                                 JOptionPane.showMessageDialog(null,"You're not able to attack this block! Try again.","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
                             }
                         }
                     }
@@ -747,14 +803,17 @@ public class GameController extends Container {
                                     }
                                     else{
                                         JOptionPane.showMessageDialog(null,"This unit has the max level.","Warning",JOptionPane.WARNING_MESSAGE);
+                                        refresh();
                                     }
                                 }
                                 else{
                                     JOptionPane.showMessageDialog(null,"It's not your Unit","Warning",JOptionPane.WARNING_MESSAGE);
+                                    refresh();
                                 }
                             }
                             else{
                                 JOptionPane.showMessageDialog(null,"There's no unit here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
                             }
                         }
                         else if(firstX!=-1 && firstY!=-1){
@@ -766,6 +825,7 @@ public class GameController extends Container {
                                             secondY=j;
                                             gameManager.merge(gameManager.whoseTurn(),firstX,firstY,secondX,secondY);
                                             updateBoard(board, gameManager);
+                                            JOptionPane.showMessageDialog(null, "Units merged successfully!", "Merge", JOptionPane.INFORMATION_MESSAGE);
                                             GameLogger.log("Player attempting merge firs unit ("+firstX+","+firstY+")with second unit at (" + i + "," + j + ")");
                                             refresh();
                                         }
@@ -776,14 +836,17 @@ public class GameController extends Container {
                                     }
                                     else{
                                         JOptionPane.showMessageDialog(null,"This unit has the max level.","Warning",JOptionPane.WARNING_MESSAGE);
+                                        refresh();
                                     }
                                 }
                                 else {
                                     JOptionPane.showMessageDialog(null,"It's not your Unit","Warning",JOptionPane.WARNING_MESSAGE);
+                                    refresh();
                                 }
                             }
                             else{
                                 JOptionPane.showMessageDialog(null,"There's no unit here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
                             }
 
                         }
@@ -809,11 +872,13 @@ public class GameController extends Container {
                                 }
                                 else{
                                     JOptionPane.showMessageDialog(null,"This unit has already moved.","Warning",JOptionPane.WARNING_MESSAGE);
+                                    refresh();
                                 }
 
                             }
                             else{
                                 JOptionPane.showMessageDialog(null,"There's no unit!","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();//
                             }
 
                         }
@@ -828,74 +893,103 @@ public class GameController extends Container {
                             }
                             else{
                                 JOptionPane.showMessageDialog(null,"You're not able to go there!","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
                             }
                         }
                     }
                     else if(buyUnitMode){
-                        if(producerX==-1 && producerY==-1){
-                            if(gameManager.canAffordBuyingUnit(gameManager.whoseTurn(),newUnit)){
-                                if(gameManager.canBuyFrom(i,j,newUnit)){
-                                    producerX=i;
-                                    producerY=j;
+                        this.newUnit=actionPanel.getUnitSelector().getSelectedUnitId();//
+                        if(this.newUnit!=-1){
+                            if(producerX==-1 && producerY==-1){
+                                if(gameManager.getTile(i,j).hasStructure()){
+                                    if(gameManager.canAffordBuyingUnit(gameManager.whoseTurn(),newUnit)){
+                                        if(gameManager.canBuyFrom(i,j,newUnit)){
+                                            producerX=i;
+                                            producerY=j;
+                                        }
+                                        else{
+                                            JOptionPane.showMessageDialog(null,"You can't buy unit from here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                            refresh();
+                                        }
+                                    }
+                                    else{
+                                        JOptionPane.showMessageDialog(null,"You don't have enough gold!","Warning",JOptionPane.WARNING_MESSAGE);
+                                        refresh();//
+                                    }
                                 }
                                 else{
-                                    JOptionPane.showMessageDialog(null,"You can't buy unit from here!","Warning",JOptionPane.WARNING_MESSAGE);
-                                }
-                            }
-                            else{
-                                JOptionPane.showMessageDialog(null,"You don't have enough gold!","Warning",JOptionPane.WARNING_MESSAGE);
-                                refresh();
-                            }
-                        }
-                        else if(producerX!=-1 && producerY!=-1){
-                            gameManager.whereToPlace(gameManager.whoseTurn());
-                            if(gameManager.canPlaceUnit()){
-                                if(gameManager.canPlaceUnitThere(i,j)){
-                                    newUnitX=i;
-                                    newUnitY=j;
-                                    gameManager.buyUnit(newUnit,gameManager.whoseTurn(),newUnitX,newUnitY,producerX,producerY);
-                                    updateBoard(board, gameManager);
-                                    GameLogger.log("Player has bought a unit with level"+newUnit+"(" + i + "," + j + ") from (" + producerX + "," + producerY + ")" );
+                                    JOptionPane.showMessageDialog(null,"There's no producer here.","Warning",JOptionPane.WARNING_MESSAGE);
                                     refresh();
                                 }
-                                else{
-                                    JOptionPane.showMessageDialog(null,"You can't place unit here!","Warning",JOptionPane.WARNING_MESSAGE);
-                                }
+
                             }
-                            else{
-                                JOptionPane.showMessageDialog(null,"You can't place a new unit!","Warning",JOptionPane.WARNING_MESSAGE);
-                                refresh();
-                            }
-                        }
-                    }
-                    else if(buildStructureMode){
-                        if(!gameManager.HasMaxAmount(gameManager.whoseTurn(),newStructure)){
-                            if(gameManager.canAffordBuilding(newStructure,gameManager.whoseTurn())){
-                                gameManager.whereToBuildStructure(gameManager.whoseTurn(),newStructure);
-                                if(gameManager.canBuild(gameManager.whoseTurn())){
-                                    if(gameManager.canBuildHere(i,j)){
-                                        gameManager.buildStructure(i,j,gameManager.whoseTurn(),newStructure);
+                            else if(producerX!=-1 && producerY!=-1){
+                                gameManager.whereToPlace(gameManager.whoseTurn());
+                                if(gameManager.canPlaceUnit()){
+                                    if(gameManager.canPlaceUnitThere(i,j)){
+                                        newUnitX=i;
+                                        newUnitY=j;
+                                        gameManager.buyUnit(newUnit,gameManager.whoseTurn(),newUnitX,newUnitY,producerX,producerY);
                                         updateBoard(board, gameManager);
-                                        GameLogger.log("Player attempting to build " + newStructure + " at (" + i + "," + j + ")");
+                                        GameLogger.log("Player has bought a unit with level"+newUnit+"(" + i + "," + j + ") from (" + producerX + "," + producerY + ")" );
                                         refresh();
                                     }
                                     else{
-                                        JOptionPane.showMessageDialog(null,"You can't build here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                        JOptionPane.showMessageDialog(null,"You can't place unit here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                        refresh();
                                     }
                                 }
                                 else{
-                                    JOptionPane.showMessageDialog(null,"You can't build this structure!","Warning",JOptionPane.WARNING_MESSAGE);
+                                    JOptionPane.showMessageDialog(null,"You can't place a new unit!","Warning",JOptionPane.WARNING_MESSAGE);
+                                    refresh();
                                 }
                             }
-                            else{
-                                JOptionPane.showMessageDialog(null,"You don't have enough gold!","Warning",JOptionPane.WARNING_MESSAGE);
-                                refresh();
-                            }
-
                         }
                         else{
-                            JOptionPane.showMessageDialog(null,"You already have the max amount","Warning",JOptionPane.WARNING_MESSAGE);
+                            JOptionPane.showMessageDialog(null,"Choose unit!","Warning",JOptionPane.WARNING_MESSAGE);
+                            refresh();
                         }
+
+                    }
+                    else if(buildStructureMode){
+                        this.newStructure=actionPanel.StructureName();//
+                        if(this.newStructure!=null){
+                            if(!gameManager.HasMaxAmount(gameManager.whoseTurn(),newStructure)){
+                                if(gameManager.canAffordBuilding(newStructure,gameManager.whoseTurn())){
+                                    gameManager.whereToBuildStructure(gameManager.whoseTurn(),newStructure);
+                                    if(gameManager.canBuild(gameManager.whoseTurn())){
+                                        if(gameManager.canBuildHere(i,j)){
+                                            gameManager.buildStructure(i,j,gameManager.whoseTurn(),newStructure);
+                                            updateBoard(board, gameManager);
+                                            GameLogger.log("Player attempting to build " + newStructure + " at (" + i + "," + j + ")");
+                                            refresh();
+                                        }
+                                        else{
+                                            JOptionPane.showMessageDialog(null,"You can't build here!","Warning",JOptionPane.WARNING_MESSAGE);
+                                            refresh();
+                                        }
+                                    }
+                                    else{
+                                        JOptionPane.showMessageDialog(null,"You can't build this structure!","Warning",JOptionPane.WARNING_MESSAGE);
+                                        refresh();
+                                    }
+                                }
+                                else{
+                                    JOptionPane.showMessageDialog(null,"You don't have enough gold!","Warning",JOptionPane.WARNING_MESSAGE);
+                                    refresh();
+                                }
+
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"You already have the max amount","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
+                            }
+                        }
+                        else{
+                            JOptionPane.showMessageDialog(null,"Choose structure!!","Warning",JOptionPane.WARNING_MESSAGE);
+                            refresh();
+                        }
+
 
                     }
                     else if(levelUpStructureMode){
@@ -903,29 +997,35 @@ public class GameController extends Container {
                         if(gameManager.canLevelUpStructure(gameManager.whoseTurn())){
                             if(gameManager.canLevelUpThis(i,j)){
                                 gameManager.levelUpStructure(i,j);
+                                JOptionPane.showMessageDialog(null,"Level up successful!","Success",JOptionPane.INFORMATION_MESSAGE);
                                 GameLogger.log("Player attempting to level up structure at (" + i + "," + j + ")");
                                 refresh();
                             }
                             else{
                                 JOptionPane.showMessageDialog(null,"You can't level up this Structure!","Warning",JOptionPane.WARNING_MESSAGE);
+                                refresh();
                             }
                         }
                         else{
                             JOptionPane.showMessageDialog(null,"You can't level up any Structure.","Warning",JOptionPane.WARNING_MESSAGE);
+                            refresh();
                         }
                     }
                     else{
                         JOptionPane.showMessageDialog(null,"You haven't enabled any Action!","Warning",JOptionPane.WARNING_MESSAGE);
+                        refresh();
                     }
 
                 }
                 else {
                     JOptionPane.showMessageDialog(null, "Not valid input", "Error", JOptionPane.ERROR_MESSAGE);
+                    refresh();
                 }
             }
             catch (Exception ex){
                 GameLogger.log("Unexpected error in boardAction: "+ ex.getMessage());
-                JOptionPane.showMessageDialog(null,"Unexpected error in action","Error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null,"Unexpected error in action"+ex.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+                refresh();
             }
 
 

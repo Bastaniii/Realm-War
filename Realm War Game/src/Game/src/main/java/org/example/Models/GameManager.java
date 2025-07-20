@@ -670,8 +670,8 @@ public class GameManager {
             }
         }
         int moveRange= GameBoard.gameBoard[UnitX][UnitY].getUnit().getMovementRange();
-        for(int i=UnitX-moveRange;i<UnitX+moveRange;i++){
-            for(int j=UnitY-moveRange;j<UnitY+moveRange;j++){
+        for(int i=UnitX-moveRange;i<=UnitX+moveRange;i++){
+            for(int j=UnitY-moveRange;j<=UnitY+moveRange;j++){
                 if(0<=i && i<19 && 0<=j && j<19){
                     if(!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
                         GameBoard.gameBoard[i][j].setMovable(true);
