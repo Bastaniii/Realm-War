@@ -1,0 +1,1239 @@
+[2025/07/19 20:08:15]New Game clicked - showing player selection dialog
+[2025/07/19 20:08:17]Board updated for Player 1
+[2025/07/19 20:08:18]Player 1's turn started.
+[2025/07/19 20:08:21]Invalid click on tile (3,16)
+[2025/07/19 20:08:22]Invalid click on tile (3,15)
+[2025/07/19 20:08:22]Board updated for Player 1
+[2025/07/19 20:08:22]Player attempting move from (3,16) to (3,15)
+[2025/07/19 20:08:27]Invalid click on tile (3,15)
+[2025/07/19 20:08:30]Player 1 ended turn.
+[2025/07/19 20:08:30]Player 2's turn started.
+[2025/07/19 20:08:33]Invalid click on tile (16,3)
+[2025/07/19 20:08:34]Invalid click on tile (15,3)
+[2025/07/19 20:08:34]Board updated for Player 2
+[2025/07/19 20:08:34]Player attempting move from (16,3) to (15,3)
+[2025/07/19 20:08:35]Player 2 ended turn.
+[2025/07/19 20:08:35]Player 1's turn started.
+[2025/07/19 20:08:37]Invalid click on tile (3,15)
+[2025/07/19 20:08:38]Invalid click on tile (4,15)
+[2025/07/19 20:08:38]Board updated for Player 1
+[2025/07/19 20:08:38]Player attempting move from (3,15) to (4,15)
+[2025/07/19 20:09:15]Player 1's turn timed out.
+[2025/07/19 20:09:15]Player 1 ended turn.
+[2025/07/19 20:09:15]Player 2's turn started.
+[2025/07/19 20:09:56]Player 2's turn timed out.
+[2025/07/19 20:09:56]Player 2 ended turn.
+[2025/07/19 20:09:56]Player 1's turn started.
+[2025/07/19 20:10:36]Player 1's turn timed out.
+[2025/07/19 20:10:36]Player 1 ended turn.
+[2025/07/19 20:10:36]Player 2's turn started.
+[2025/07/19 20:11:16]Player 2's turn timed out.
+[2025/07/19 20:11:16]Player 2 ended turn.
+[2025/07/19 20:11:16]Player 1's turn started.
+[2025/07/19 20:11:52]Invalid click on tile (4,15)
+[2025/07/19 20:11:52]Invalid click on tile (5,15)
+[2025/07/19 20:11:52]Board updated for Player 1
+[2025/07/19 20:11:52]Player attempting move from (4,15) to (5,15)
+[2025/07/19 20:11:55]Player 1 ended turn.
+[2025/07/19 20:11:55]Player 2's turn started.
+[2025/07/19 20:12:00]Invalid click on tile (15,3)
+[2025/07/19 20:12:01]Invalid click on tile (14,3)
+[2025/07/19 20:12:01]Board updated for Player 2
+[2025/07/19 20:12:01]Player attempting move from (15,3) to (14,3)
+[2025/07/19 20:12:36]Player 2's turn timed out.
+[2025/07/19 20:12:36]Player 2 ended turn.
+[2025/07/19 20:12:36]Player 1's turn started.
+[2025/07/19 20:13:16]Player 1's turn timed out.
+[2025/07/19 20:13:16]Player 1 ended turn.
+[2025/07/19 20:13:16]Player 2's turn started.
+[2025/07/19 20:13:56]Player 2's turn timed out.
+[2025/07/19 20:13:56]Player 2 ended turn.
+[2025/07/19 20:13:56]Player 1's turn started.
+[2025/07/19 23:06:55]New Game clicked - showing player selection dialog
+[2025/07/19 23:06:57]Board updated for Player 1
+[2025/07/19 23:06:57]Player 1's turn started.
+[2025/07/19 23:07:04]Invalid click on tile (3,16)
+[2025/07/19 23:07:06]Invalid click on tile (4,16)
+[2025/07/19 23:07:06]Board updated for Player 1
+[2025/07/19 23:07:06]Player attempting move from (3,16) to (4,16)
+[2025/07/19 23:07:08]Player 1 ended turn.
+[2025/07/19 23:07:08]Player 2's turn started.
+[2025/07/19 23:07:10]Invalid click on tile (16,3)
+[2025/07/19 23:07:15]Invalid click on tile (16,3)
+[2025/07/19 23:07:16]Invalid click on tile (15,3)
+[2025/07/19 23:07:16]Board updated for Player 2
+[2025/07/19 23:07:16]Player attempting move from (16,3) to (15,3)
+[2025/07/19 23:07:28]Invalid click on tile (16,2)
+[2025/07/19 23:07:28]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:07:41]Invalid click on tile (16,2)
+[2025/07/19 23:07:41]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:07:48]Player 2's turn timed out.
+[2025/07/19 23:07:48]Player 2 ended turn.
+[2025/07/19 23:07:48]Player 1's turn started.
+[2025/07/19 23:07:51]Invalid click on tile (4,16)
+[2025/07/19 23:07:52]Invalid click on tile (5,15)
+[2025/07/19 23:07:52]Board updated for Player 1
+[2025/07/19 23:07:52]Player attempting move from (4,16) to (5,15)
+[2025/07/19 23:08:02]Invalid click on tile (4,16)
+[2025/07/19 23:08:02]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:08:17]Invalid click on tile (3,16)
+[2025/07/19 23:08:17]Board updated for Player 1
+[2025/07/19 23:08:17]Player attempting to build Barrack at (3,16)
+[2025/07/19 23:08:24]Invalid click on tile (4,16)
+[2025/07/19 23:08:24]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:08:29]Player 1's turn timed out.
+[2025/07/19 23:08:29]Player 1 ended turn.
+[2025/07/19 23:08:29]Player 2's turn started.
+[2025/07/19 23:08:33]Invalid click on tile (15,3)
+[2025/07/19 23:08:33]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:08:42]Invalid click on tile (15,3)
+[2025/07/19 23:08:42]Invalid click on tile (14,3)
+[2025/07/19 23:08:42]Board updated for Player 2
+[2025/07/19 23:08:42]Player attempting move from (15,3) to (14,3)
+[2025/07/19 23:08:52]Invalid click on tile (16,1)
+[2025/07/19 23:08:52]Board updated for Player 2
+[2025/07/19 23:08:52]Player attempting to build Barrack at (16,1)
+[2025/07/19 23:08:58]Invalid click on tile (14,3)
+[2025/07/19 23:09:02]Player 2 ended turn.
+[2025/07/19 23:09:02]Player 1's turn started.
+[2025/07/19 23:09:05]Invalid click on tile (5,15)
+[2025/07/19 23:09:06]Invalid click on tile (6,15)
+[2025/07/19 23:09:06]Board updated for Player 1
+[2025/07/19 23:09:06]Player attempting move from (5,15) to (6,15)
+[2025/07/19 23:09:14]Invalid click on tile (5,15)
+[2025/07/19 23:09:14]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:09:22]Player 1 ended turn.
+[2025/07/19 23:09:22]Player 2's turn started.
+[2025/07/19 23:09:24]Invalid click on tile (14,3)
+[2025/07/19 23:09:25]Invalid click on tile (13,4)
+[2025/07/19 23:09:25]Board updated for Player 2
+[2025/07/19 23:09:25]Player attempting move from (14,3) to (13,4)
+[2025/07/19 23:09:28]Player 2 ended turn.
+[2025/07/19 23:09:28]Player 1's turn started.
+[2025/07/19 23:09:30]Invalid click on tile (6,15)
+[2025/07/19 23:09:31]Invalid click on tile (7,14)
+[2025/07/19 23:09:31]Board updated for Player 1
+[2025/07/19 23:09:31]Player attempting move from (6,15) to (7,14)
+[2025/07/19 23:09:32]Player 1 ended turn.
+[2025/07/19 23:09:32]Player 2's turn started.
+[2025/07/19 23:09:35]Invalid click on tile (13,4)
+[2025/07/19 23:09:36]Invalid click on tile (12,5)
+[2025/07/19 23:09:36]Board updated for Player 2
+[2025/07/19 23:09:36]Player attempting move from (13,4) to (12,5)
+[2025/07/19 23:09:42]Player 2 ended turn.
+[2025/07/19 23:09:42]Player 1's turn started.
+[2025/07/19 23:09:44]Invalid click on tile (7,14)
+[2025/07/19 23:09:45]Invalid click on tile (8,13)
+[2025/07/19 23:09:45]Board updated for Player 1
+[2025/07/19 23:09:45]Player attempting move from (7,14) to (8,13)
+[2025/07/19 23:09:49]Player 1 ended turn.
+[2025/07/19 23:09:49]Player 2's turn started.
+[2025/07/19 23:09:55]Invalid click on tile (12,5)
+[2025/07/19 23:09:56]Invalid click on tile (12,6)
+[2025/07/19 23:09:56]Board updated for Player 2
+[2025/07/19 23:09:56]Player attempting move from (12,5) to (12,6)
+[2025/07/19 23:10:00]Player 2 ended turn.
+[2025/07/19 23:10:00]Player 1's turn started.
+[2025/07/19 23:10:03]Invalid click on tile (8,13)
+[2025/07/19 23:10:04]Invalid click on tile (9,13)
+[2025/07/19 23:10:04]Board updated for Player 1
+[2025/07/19 23:10:04]Player attempting move from (8,13) to (9,13)
+[2025/07/19 23:10:07]Player 1 ended turn.
+[2025/07/19 23:10:07]Player 2's turn started.
+[2025/07/19 23:10:09]Invalid click on tile (12,6)
+[2025/07/19 23:10:10]Invalid click on tile (12,7)
+[2025/07/19 23:10:10]Board updated for Player 2
+[2025/07/19 23:10:10]Player attempting move from (12,6) to (12,7)
+[2025/07/19 23:10:13]Player 2 ended turn.
+[2025/07/19 23:10:13]Player 1's turn started.
+[2025/07/19 23:10:19]Invalid click on tile (9,13)
+[2025/07/19 23:10:20]Invalid click on tile (11,13)
+[2025/07/19 23:10:22]Invalid click on tile (10,13)
+[2025/07/19 23:10:22]Board updated for Player 1
+[2025/07/19 23:10:22]Player attempting move from (9,13) to (10,13)
+[2025/07/19 23:10:24]Player 1 ended turn.
+[2025/07/19 23:10:24]Player 2's turn started.
+[2025/07/19 23:10:27]Invalid click on tile (12,7)
+[2025/07/19 23:10:27]Invalid click on tile (12,8)
+[2025/07/19 23:10:27]Board updated for Player 2
+[2025/07/19 23:10:27]Player attempting move from (12,7) to (12,8)
+[2025/07/19 23:10:30]Player 2 ended turn.
+[2025/07/19 23:10:30]Player 1's turn started.
+[2025/07/19 23:10:33]Invalid click on tile (10,13)
+[2025/07/19 23:10:33]Invalid click on tile (11,13)
+[2025/07/19 23:10:33]Board updated for Player 1
+[2025/07/19 23:10:33]Player attempting move from (10,13) to (11,13)
+[2025/07/19 23:10:35]Player 1 ended turn.
+[2025/07/19 23:10:35]Player 2's turn started.
+[2025/07/19 23:10:37]Invalid click on tile (12,8)
+[2025/07/19 23:10:38]Invalid click on tile (12,9)
+[2025/07/19 23:10:38]Board updated for Player 2
+[2025/07/19 23:10:38]Player attempting move from (12,8) to (12,9)
+[2025/07/19 23:10:40]Player 2 ended turn.
+[2025/07/19 23:10:40]Player 1's turn started.
+[2025/07/19 23:10:42]Invalid click on tile (11,13)
+[2025/07/19 23:10:43]Invalid click on tile (12,13)
+[2025/07/19 23:10:43]Board updated for Player 1
+[2025/07/19 23:10:43]Player attempting move from (11,13) to (12,13)
+[2025/07/19 23:10:44]Player 1 ended turn.
+[2025/07/19 23:10:44]Player 2's turn started.
+[2025/07/19 23:10:46]Invalid click on tile (12,9)
+[2025/07/19 23:10:47]Invalid click on tile (12,10)
+[2025/07/19 23:10:47]Board updated for Player 2
+[2025/07/19 23:10:47]Player attempting move from (12,9) to (12,10)
+[2025/07/19 23:10:49]Player 2 ended turn.
+[2025/07/19 23:10:49]Player 1's turn started.
+[2025/07/19 23:10:51]Invalid click on tile (12,10)
+[2025/07/19 23:10:55]Invalid click on tile (12,13)
+[2025/07/19 23:10:56]Invalid click on tile (12,12)
+[2025/07/19 23:10:56]Board updated for Player 1
+[2025/07/19 23:10:56]Player attempting move from (12,13) to (12,12)
+[2025/07/19 23:10:57]Player 1 ended turn.
+[2025/07/19 23:10:57]Player 2's turn started.
+[2025/07/19 23:10:59]Invalid click on tile (12,10)
+[2025/07/19 23:11:00]Invalid click on tile (12,11)
+[2025/07/19 23:11:00]Board updated for Player 2
+[2025/07/19 23:11:00]Player attempting move from (12,10) to (12,11)
+[2025/07/19 23:11:07]Invalid click on tile (15,3)
+[2025/07/19 23:11:07]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:11:14]Invalid click on tile (14,3)
+[2025/07/19 23:11:14]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:11:23]Player 2 ended turn.
+[2025/07/19 23:11:23]Player 1's turn started.
+[2025/07/19 23:11:26]Invalid click on tile (12,12)
+[2025/07/19 23:11:26]Player selected attacker at (12,12)
+[2025/07/19 23:11:26]Invalid click on tile (12,11)
+[2025/07/19 23:11:26]Player attempting attack from (12,12) to a unit (12,11)
+[2025/07/19 23:11:31]Invalid click on tile (12,11)
+[2025/07/19 23:11:36]Invalid click on tile (12,12)
+[2025/07/19 23:11:37]Invalid click on tile (13,12)
+[2025/07/19 23:11:37]Board updated for Player 1
+[2025/07/19 23:11:37]Player attempting move from (12,12) to (13,12)
+[2025/07/19 23:11:39]Player 1 ended turn.
+[2025/07/19 23:11:39]Player 2's turn started.
+[2025/07/19 23:11:41]Invalid click on tile (12,11)
+[2025/07/19 23:11:42]Invalid click on tile (12,12)
+[2025/07/19 23:11:42]Board updated for Player 2
+[2025/07/19 23:11:42]Player attempting move from (12,11) to (12,12)
+[2025/07/19 23:11:47]Invalid click on tile (13,12)
+[2025/07/19 23:11:53]Invalid click on tile (12,12)
+[2025/07/19 23:11:53]Player selected attacker at (12,12)
+[2025/07/19 23:11:54]Invalid click on tile (13,12)
+[2025/07/19 23:11:54]Player attempting attack from (12,12) to a unit (13,12)
+[2025/07/19 23:11:56]Invalid click on tile (12,12)
+[2025/07/19 23:12:04]Invalid click on tile (13,12)
+[2025/07/19 23:12:08]Player 2 ended turn.
+[2025/07/19 23:12:08]Player 1's turn started.
+[2025/07/19 23:12:12]Invalid click on tile (12,12)
+[2025/07/19 23:12:35]Invalid click on tile (13,12)
+[2025/07/19 23:12:37]Invalid click on tile (13,11)
+[2025/07/19 23:12:37]Board updated for Player 1
+[2025/07/19 23:12:37]Player attempting move from (13,12) to (13,11)
+[2025/07/19 23:12:39]Player 1 ended turn.
+[2025/07/19 23:12:39]Player 2's turn started.
+[2025/07/19 23:12:41]Invalid click on tile (12,12)
+[2025/07/19 23:12:41]Invalid click on tile (12,13)
+[2025/07/19 23:12:41]Board updated for Player 2
+[2025/07/19 23:12:41]Player attempting move from (12,12) to (12,13)
+[2025/07/19 23:12:44]Player 2 ended turn.
+[2025/07/19 23:12:44]Player 1's turn started.
+[2025/07/19 23:12:46]Invalid click on tile (13,11)
+[2025/07/19 23:12:47]Invalid click on tile (12,11)
+[2025/07/19 23:12:47]Board updated for Player 1
+[2025/07/19 23:12:47]Player attempting move from (13,11) to (12,11)
+[2025/07/19 23:13:24]Player 1's turn timed out.
+[2025/07/19 23:13:24]Player 1 ended turn.
+[2025/07/19 23:13:24]Player 2's turn started.
+[2025/07/19 23:13:40]Invalid click on tile (12,13)
+[2025/07/19 23:13:45]Player 2 ended turn.
+[2025/07/19 23:13:45]Player 1's turn started.
+[2025/07/19 23:13:53]Invalid click on tile (12,11)
+[2025/07/19 23:13:59]Invalid click on tile (12,11)
+[2025/07/19 23:14:00]Invalid click on tile (12,12)
+[2025/07/19 23:14:00]Board updated for Player 1
+[2025/07/19 23:14:00]Player attempting move from (12,11) to (12,12)
+[2025/07/19 23:14:08]Invalid click on tile (12,13)
+[2025/07/19 23:14:11]Invalid click on tile (12,12)
+[2025/07/19 23:14:11]Player selected attacker at (12,12)
+[2025/07/19 23:14:12]Invalid click on tile (12,13)
+[2025/07/19 23:14:12]Player attempting attack from (12,12) to a unit (12,13)
+[2025/07/19 23:14:14]Invalid click on tile (12,12)
+[2025/07/19 23:14:26]Player 1's turn timed out.
+[2025/07/19 23:14:26]Player 1 ended turn.
+[2025/07/19 23:14:26]Player 2's turn started.
+[2025/07/19 23:14:26]Invalid click on tile (13,12)
+[2025/07/19 23:14:26]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:15:06]Player 2's turn timed out.
+[2025/07/19 23:15:06]Player 2 ended turn.
+[2025/07/19 23:15:06]Player 1's turn started.
+[2025/07/19 23:15:46]Player 1's turn timed out.
+[2025/07/19 23:15:46]Player 1 ended turn.
+[2025/07/19 23:15:46]Player 2's turn started.
+[2025/07/19 23:16:27]Player 2's turn timed out.
+[2025/07/19 23:16:27]Player 2 ended turn.
+[2025/07/19 23:16:27]Player 1's turn started.
+[2025/07/19 23:17:07]Player 1's turn timed out.
+[2025/07/19 23:17:07]Player 1 ended turn.
+[2025/07/19 23:17:07]Player 2's turn started.
+[2025/07/19 23:17:47]Player 2's turn timed out.
+[2025/07/19 23:17:47]Player 2 ended turn.
+[2025/07/19 23:17:47]Player 1's turn started.
+[2025/07/19 23:18:28]Player 1's turn timed out.
+[2025/07/19 23:18:28]Player 1 ended turn.
+[2025/07/19 23:18:28]Player 2's turn started.
+[2025/07/19 23:19:08]Player 2's turn timed out.
+[2025/07/19 23:19:08]Player 2 ended turn.
+[2025/07/19 23:19:08]Player 1's turn started.
+[2025/07/19 23:19:48]Player 1's turn timed out.
+[2025/07/19 23:19:48]Player 1 ended turn.
+[2025/07/19 23:19:48]Player 2's turn started.
+[2025/07/19 23:20:29]Player 2's turn timed out.
+[2025/07/19 23:20:29]Player 2 ended turn.
+[2025/07/19 23:20:29]Player 1's turn started.
+[2025/07/19 23:21:09]Player 1's turn timed out.
+[2025/07/19 23:21:09]Player 1 ended turn.
+[2025/07/19 23:21:09]Player 2's turn started.
+[2025/07/19 23:21:49]Player 2's turn timed out.
+[2025/07/19 23:21:49]Player 2 ended turn.
+[2025/07/19 23:21:49]Player 1's turn started.
+[2025/07/19 23:22:30]Player 1's turn timed out.
+[2025/07/19 23:22:30]Player 1 ended turn.
+[2025/07/19 23:22:30]Player 2's turn started.
+[2025/07/19 23:23:10]Player 2's turn timed out.
+[2025/07/19 23:23:10]Player 2 ended turn.
+[2025/07/19 23:23:10]Player 1's turn started.
+[2025/07/19 23:23:50]Player 1's turn timed out.
+[2025/07/19 23:23:50]Player 1 ended turn.
+[2025/07/19 23:23:50]Player 2's turn started.
+[2025/07/19 23:24:31]Player 2's turn timed out.
+[2025/07/19 23:24:31]Player 2 ended turn.
+[2025/07/19 23:24:31]Player 1's turn started.
+[2025/07/19 23:25:11]Player 1's turn timed out.
+[2025/07/19 23:25:11]Player 1 ended turn.
+[2025/07/19 23:25:11]Player 2's turn started.
+[2025/07/19 23:27:49]New Game clicked - showing player selection dialog
+[2025/07/19 23:27:51]Board updated for Player 1
+[2025/07/19 23:27:51]Player 1's turn started.
+[2025/07/19 23:28:00]Invalid click on tile (3,16)
+[2025/07/19 23:28:05]Invalid click on tile (3,16)
+[2025/07/19 23:28:05]Invalid click on tile (4,15)
+[2025/07/19 23:28:05]Board updated for Player 1
+[2025/07/19 23:28:05]Player attempting move from (3,16) to (4,15)
+[2025/07/19 23:28:09]Player 1 ended turn.
+[2025/07/19 23:28:09]Player 2's turn started.
+[2025/07/19 23:28:12]Invalid click on tile (16,3)
+[2025/07/19 23:28:12]Invalid click on tile (15,4)
+[2025/07/19 23:28:12]Board updated for Player 2
+[2025/07/19 23:28:12]Player attempting move from (16,3) to (15,4)
+[2025/07/19 23:28:17]Player 2 ended turn.
+[2025/07/19 23:28:17]Player 1's turn started.
+[2025/07/19 23:28:19]Invalid click on tile (4,15)
+[2025/07/19 23:28:20]Invalid click on tile (4,15)
+[2025/07/19 23:28:22]Invalid click on tile (4,15)
+[2025/07/19 23:28:26]Invalid click on tile (4,15)
+[2025/07/19 23:28:27]Invalid click on tile (5,15)
+[2025/07/19 23:28:27]Board updated for Player 1
+[2025/07/19 23:28:27]Player attempting move from (4,15) to (5,15)
+[2025/07/19 23:28:28]Player 1 ended turn.
+[2025/07/19 23:28:28]Player 2's turn started.
+[2025/07/19 23:28:30]Invalid click on tile (15,4)
+[2025/07/19 23:28:31]Invalid click on tile (14,5)
+[2025/07/19 23:28:31]Board updated for Player 2
+[2025/07/19 23:28:31]Player attempting move from (15,4) to (14,5)
+[2025/07/19 23:28:34]Player 2 ended turn.
+[2025/07/19 23:28:34]Player 1's turn started.
+[2025/07/19 23:28:36]Invalid click on tile (5,15)
+[2025/07/19 23:28:36]Invalid click on tile (6,15)
+[2025/07/19 23:28:36]Board updated for Player 1
+[2025/07/19 23:28:36]Player attempting move from (5,15) to (6,15)
+[2025/07/19 23:28:39]Player 1 ended turn.
+[2025/07/19 23:28:39]Player 2's turn started.
+[2025/07/19 23:28:41]Invalid click on tile (14,5)
+[2025/07/19 23:28:41]Invalid click on tile (14,6)
+[2025/07/19 23:28:41]Board updated for Player 2
+[2025/07/19 23:28:41]Player attempting move from (14,5) to (14,6)
+[2025/07/19 23:28:43]Player 2 ended turn.
+[2025/07/19 23:28:43]Player 1's turn started.
+[2025/07/19 23:28:45]Invalid click on tile (6,15)
+[2025/07/19 23:28:46]Invalid click on tile (7,15)
+[2025/07/19 23:28:46]Board updated for Player 1
+[2025/07/19 23:28:46]Player attempting move from (6,15) to (7,15)
+[2025/07/19 23:28:49]Player 1 ended turn.
+[2025/07/19 23:28:49]Player 2's turn started.
+[2025/07/19 23:28:51]Invalid click on tile (14,6)
+[2025/07/19 23:28:51]Invalid click on tile (14,7)
+[2025/07/19 23:28:51]Board updated for Player 2
+[2025/07/19 23:28:51]Player attempting move from (14,6) to (14,7)
+[2025/07/19 23:28:53]Player 2 ended turn.
+[2025/07/19 23:28:53]Player 1's turn started.
+[2025/07/19 23:28:54]Invalid click on tile (7,15)
+[2025/07/19 23:28:59]Invalid click on tile (7,15)
+[2025/07/19 23:29:00]Invalid click on tile (8,15)
+[2025/07/19 23:29:00]Board updated for Player 1
+[2025/07/19 23:29:00]Player attempting move from (7,15) to (8,15)
+[2025/07/19 23:29:01]Player 1 ended turn.
+[2025/07/19 23:29:01]Player 2's turn started.
+[2025/07/19 23:29:03]Invalid click on tile (14,7)
+[2025/07/19 23:29:03]Invalid click on tile (14,8)
+[2025/07/19 23:29:03]Board updated for Player 2
+[2025/07/19 23:29:03]Player attempting move from (14,7) to (14,8)
+[2025/07/19 23:29:04]Player 2 ended turn.
+[2025/07/19 23:29:04]Player 1's turn started.
+[2025/07/19 23:29:05]Invalid click on tile (8,15)
+[2025/07/19 23:29:06]Invalid click on tile (9,15)
+[2025/07/19 23:29:06]Board updated for Player 1
+[2025/07/19 23:29:06]Player attempting move from (8,15) to (9,15)
+[2025/07/19 23:29:06]Player 1 ended turn.
+[2025/07/19 23:29:06]Player 2's turn started.
+[2025/07/19 23:29:08]Invalid click on tile (14,8)
+[2025/07/19 23:29:09]Invalid click on tile (14,9)
+[2025/07/19 23:29:09]Board updated for Player 2
+[2025/07/19 23:29:09]Player attempting move from (14,8) to (14,9)
+[2025/07/19 23:29:10]Player 2 ended turn.
+[2025/07/19 23:29:10]Player 1's turn started.
+[2025/07/19 23:29:11]Invalid click on tile (9,15)
+[2025/07/19 23:29:12]Invalid click on tile (10,15)
+[2025/07/19 23:29:12]Board updated for Player 1
+[2025/07/19 23:29:12]Player attempting move from (9,15) to (10,15)
+[2025/07/19 23:29:13]Player 1 ended turn.
+[2025/07/19 23:29:13]Player 2's turn started.
+[2025/07/19 23:29:14]Invalid click on tile (14,9)
+[2025/07/19 23:29:20]Invalid click on tile (14,9)
+[2025/07/19 23:29:20]Invalid click on tile (14,10)
+[2025/07/19 23:29:20]Board updated for Player 2
+[2025/07/19 23:29:20]Player attempting move from (14,9) to (14,10)
+[2025/07/19 23:29:24]Player 2 ended turn.
+[2025/07/19 23:29:24]Player 1's turn started.
+[2025/07/19 23:29:32]Invalid click on tile (10,15)
+[2025/07/19 23:29:32]Invalid click on tile (10,15)
+[2025/07/19 23:29:35]Invalid click on tile (10,15)
+[2025/07/19 23:29:39]Invalid click on tile (10,15)
+[2025/07/19 23:29:40]Invalid click on tile (11,15)
+[2025/07/19 23:29:40]Board updated for Player 1
+[2025/07/19 23:29:40]Player attempting move from (10,15) to (11,15)
+[2025/07/19 23:29:41]Player 1 ended turn.
+[2025/07/19 23:29:41]Player 2's turn started.
+[2025/07/19 23:29:45]Invalid click on tile (14,10)
+[2025/07/19 23:29:47]Invalid click on tile (14,11)
+[2025/07/19 23:29:47]Board updated for Player 2
+[2025/07/19 23:29:47]Player attempting move from (14,10) to (14,11)
+[2025/07/19 23:29:49]Player 2 ended turn.
+[2025/07/19 23:29:49]Player 1's turn started.
+[2025/07/19 23:29:52]Invalid click on tile (11,15)
+[2025/07/19 23:29:53]Invalid click on tile (12,14)
+[2025/07/19 23:29:53]Board updated for Player 1
+[2025/07/19 23:29:53]Player attempting move from (11,15) to (12,14)
+[2025/07/19 23:30:00]Player 1 ended turn.
+[2025/07/19 23:30:00]Player 2's turn started.
+[2025/07/19 23:30:01]Invalid click on tile (14,11)
+[2025/07/19 23:30:02]Invalid click on tile (13,12)
+[2025/07/19 23:30:02]Board updated for Player 2
+[2025/07/19 23:30:02]Player attempting move from (14,11) to (13,12)
+[2025/07/19 23:30:04]Player 2 ended turn.
+[2025/07/19 23:30:04]Player 1's turn started.
+[2025/07/19 23:30:09]Invalid click on tile (12,14)
+[2025/07/19 23:30:09]Invalid click on tile (13,14)
+[2025/07/19 23:30:09]Board updated for Player 1
+[2025/07/19 23:30:09]Player attempting move from (12,14) to (13,14)
+[2025/07/19 23:30:22]Player 1 ended turn.
+[2025/07/19 23:30:22]Player 2's turn started.
+[2025/07/19 23:30:26]Invalid click on tile (13,12)
+[2025/07/19 23:30:27]Invalid click on tile (13,13)
+[2025/07/19 23:30:27]Board updated for Player 2
+[2025/07/19 23:30:27]Player attempting move from (13,12) to (13,13)
+[2025/07/19 23:30:32]Invalid click on tile (13,14)
+[2025/07/19 23:30:48]Invalid click on tile (13,14)
+[2025/07/19 23:30:55]Invalid click on tile (13,14)
+[2025/07/19 23:31:03]Player 2's turn timed out.
+[2025/07/19 23:31:03]Player 2 ended turn.
+[2025/07/19 23:31:03]Player 1's turn started.
+[2025/07/19 23:31:03]Invalid click on tile (13,13)
+[2025/07/19 23:31:06]Invalid click on tile (13,14)
+[2025/07/19 23:31:07]Invalid click on tile (13,13)
+[2025/07/19 23:31:37]Invalid click on tile (3,17)
+[2025/07/19 23:31:37]Board updated for Player 1
+[2025/07/19 23:31:37]Player attempting to build Barrack at (3,17)
+[2025/07/19 23:31:43]Player 1's turn timed out.
+[2025/07/19 23:31:43]Player 1 ended turn.
+[2025/07/19 23:31:43]Player 2's turn started.
+[2025/07/19 23:31:58]Invalid click on tile (16,2)
+[2025/07/19 23:31:58]Board updated for Player 2
+[2025/07/19 23:31:58]Player attempting to build Barrack at (16,2)
+[2025/07/19 23:32:17]Invalid click on tile (14,6)
+[2025/07/19 23:32:17]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:32:23]Player 2's turn timed out.
+[2025/07/19 23:32:23]Player 2 ended turn.
+[2025/07/19 23:32:23]Player 1's turn started.
+[2025/07/19 23:32:27]Invalid click on tile (13,14)
+[2025/07/19 23:32:27]Player selected attacker at (13,14)
+[2025/07/19 23:32:28]Invalid click on tile (13,13)
+[2025/07/19 23:32:28]Player attempting attack from (13,14) to a unit (13,13)
+[2025/07/19 23:32:30]Invalid click on tile (13,13)
+[2025/07/19 23:32:36]Invalid click on tile (13,13)
+[2025/07/19 23:33:04]Player 1's turn timed out.
+[2025/07/19 23:33:04]Player 1 ended turn.
+[2025/07/19 23:33:04]Player 2's turn started.
+[2025/07/19 23:33:05]Invalid click on tile (13,12)
+[2025/07/19 23:33:05]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/19 23:36:49]New Game clicked - showing player selection dialog
+[2025/07/19 23:37:13]Board updated for Player 1
+[2025/07/19 23:37:13]Player 1's turn started.
+[2025/07/19 23:37:53]Player 1's turn timed out.
+[2025/07/19 23:37:53]Player 1 ended turn.
+[2025/07/19 23:37:53]Player 2's turn started.
+[2025/07/19 23:38:16]New Game clicked - showing player selection dialog
+[2025/07/19 23:38:17]Board updated for Player 1
+[2025/07/19 23:38:17]Player 1's turn started.
+[2025/07/19 23:38:31]Invalid click on tile (3,16)
+[2025/07/19 23:38:31]Invalid click on tile (4,16)
+[2025/07/19 23:38:31]Board updated for Player 1
+[2025/07/19 23:38:31]Player attempting move from (3,16) to (4,16)
+[2025/07/19 23:38:33]Player 1 ended turn.
+[2025/07/19 23:38:33]Player 2's turn started.
+[2025/07/19 23:38:35]Invalid click on tile (16,3)
+[2025/07/19 23:38:36]Invalid click on tile (15,4)
+[2025/07/19 23:38:36]Board updated for Player 2
+[2025/07/19 23:38:36]Player attempting move from (16,3) to (15,4)
+[2025/07/19 23:38:39]Player 2 ended turn.
+[2025/07/19 23:38:39]Player 1's turn started.
+[2025/07/19 23:38:41]Invalid click on tile (4,16)
+[2025/07/19 23:38:42]Invalid click on tile (5,15)
+[2025/07/19 23:38:42]Board updated for Player 1
+[2025/07/19 23:38:42]Player attempting move from (4,16) to (5,15)
+[2025/07/19 23:38:50]Player 1 ended turn.
+[2025/07/19 23:38:50]Player 2's turn started.
+[2025/07/19 23:38:52]Invalid click on tile (15,4)
+[2025/07/19 23:38:53]Invalid click on tile (14,5)
+[2025/07/19 23:38:53]Board updated for Player 2
+[2025/07/19 23:38:53]Player attempting move from (15,4) to (14,5)
+[2025/07/19 23:38:55]Player 2 ended turn.
+[2025/07/19 23:38:55]Player 1's turn started.
+[2025/07/19 23:38:57]Invalid click on tile (5,15)
+[2025/07/19 23:38:58]Invalid click on tile (6,15)
+[2025/07/19 23:38:58]Board updated for Player 1
+[2025/07/19 23:38:58]Player attempting move from (5,15) to (6,15)
+[2025/07/19 23:39:00]Player 1 ended turn.
+[2025/07/19 23:39:00]Player 2's turn started.
+[2025/07/19 23:39:02]Invalid click on tile (14,5)
+[2025/07/19 23:39:03]Invalid click on tile (14,6)
+[2025/07/19 23:39:03]Board updated for Player 2
+[2025/07/19 23:39:03]Player attempting move from (14,5) to (14,6)
+[2025/07/19 23:39:04]Player 2 ended turn.
+[2025/07/19 23:39:04]Player 1's turn started.
+[2025/07/19 23:39:06]Invalid click on tile (6,15)
+[2025/07/19 23:39:08]Invalid click on tile (7,14)
+[2025/07/19 23:39:08]Board updated for Player 1
+[2025/07/19 23:39:08]Player attempting move from (6,15) to (7,14)
+[2025/07/19 23:39:09]Player 1 ended turn.
+[2025/07/19 23:39:09]Player 2's turn started.
+[2025/07/19 23:39:11]Invalid click on tile (14,6)
+[2025/07/19 23:39:14]Invalid click on tile (14,7)
+[2025/07/19 23:39:14]Board updated for Player 2
+[2025/07/19 23:39:14]Player attempting move from (14,6) to (14,7)
+[2025/07/19 23:39:15]Player 2 ended turn.
+[2025/07/19 23:39:15]Player 1's turn started.
+[2025/07/19 23:39:16]Invalid click on tile (7,14)
+[2025/07/19 23:39:17]Invalid click on tile (8,14)
+[2025/07/19 23:39:17]Board updated for Player 1
+[2025/07/19 23:39:17]Player attempting move from (7,14) to (8,14)
+[2025/07/19 23:39:18]Player 1 ended turn.
+[2025/07/19 23:39:18]Player 2's turn started.
+[2025/07/19 23:39:23]Invalid click on tile (14,7)
+[2025/07/19 23:39:24]Invalid click on tile (14,8)
+[2025/07/19 23:39:24]Board updated for Player 2
+[2025/07/19 23:39:24]Player attempting move from (14,7) to (14,8)
+[2025/07/19 23:39:25]Player 2 ended turn.
+[2025/07/19 23:39:25]Player 1's turn started.
+[2025/07/19 23:39:27]Invalid click on tile (8,14)
+[2025/07/19 23:39:27]Invalid click on tile (9,14)
+[2025/07/19 23:39:27]Board updated for Player 1
+[2025/07/19 23:39:27]Player attempting move from (8,14) to (9,14)
+[2025/07/19 23:39:28]Player 1 ended turn.
+[2025/07/19 23:39:28]Player 2's turn started.
+[2025/07/19 23:39:29]Invalid click on tile (14,8)
+[2025/07/19 23:39:30]Invalid click on tile (14,9)
+[2025/07/19 23:39:30]Board updated for Player 2
+[2025/07/19 23:39:30]Player attempting move from (14,8) to (14,9)
+[2025/07/19 23:39:31]Player 2 ended turn.
+[2025/07/19 23:39:31]Player 1's turn started.
+[2025/07/19 23:39:33]Invalid click on tile (9,14)
+[2025/07/19 23:39:33]Invalid click on tile (10,14)
+[2025/07/19 23:39:33]Board updated for Player 1
+[2025/07/19 23:39:33]Player attempting move from (9,14) to (10,14)
+[2025/07/19 23:39:34]Player 1 ended turn.
+[2025/07/19 23:39:34]Player 2's turn started.
+[2025/07/19 23:39:36]Invalid click on tile (14,9)
+[2025/07/19 23:39:36]Invalid click on tile (14,10)
+[2025/07/19 23:39:36]Board updated for Player 2
+[2025/07/19 23:39:36]Player attempting move from (14,9) to (14,10)
+[2025/07/19 23:39:39]Player 2 ended turn.
+[2025/07/19 23:39:39]Player 1's turn started.
+[2025/07/19 23:39:40]Invalid click on tile (10,14)
+[2025/07/19 23:39:41]Invalid click on tile (11,14)
+[2025/07/19 23:39:41]Board updated for Player 1
+[2025/07/19 23:39:41]Player attempting move from (10,14) to (11,14)
+[2025/07/19 23:39:42]Player 1 ended turn.
+[2025/07/19 23:39:42]Player 2's turn started.
+[2025/07/19 23:39:44]Invalid click on tile (14,10)
+[2025/07/19 23:39:44]Invalid click on tile (14,11)
+[2025/07/19 23:39:44]Board updated for Player 2
+[2025/07/19 23:39:44]Player attempting move from (14,10) to (14,11)
+[2025/07/19 23:39:45]Player 2 ended turn.
+[2025/07/19 23:39:45]Player 1's turn started.
+[2025/07/19 23:39:47]Invalid click on tile (11,14)
+[2025/07/19 23:39:47]Invalid click on tile (12,13)
+[2025/07/19 23:39:47]Board updated for Player 1
+[2025/07/19 23:39:47]Player attempting move from (11,14) to (12,13)
+[2025/07/19 23:39:48]Player 1 ended turn.
+[2025/07/19 23:39:48]Player 2's turn started.
+[2025/07/19 23:39:51]Invalid click on tile (14,11)
+[2025/07/19 23:39:51]Invalid click on tile (14,12)
+[2025/07/19 23:39:51]Board updated for Player 2
+[2025/07/19 23:39:51]Player attempting move from (14,11) to (14,12)
+[2025/07/19 23:39:52]Player 2 ended turn.
+[2025/07/19 23:39:52]Player 1's turn started.
+[2025/07/19 23:39:54]Invalid click on tile (12,13)
+[2025/07/19 23:39:55]Invalid click on tile (13,13)
+[2025/07/19 23:39:55]Board updated for Player 1
+[2025/07/19 23:39:55]Player attempting move from (12,13) to (13,13)
+[2025/07/19 23:39:56]Player 1 ended turn.
+[2025/07/19 23:39:56]Player 2's turn started.
+[2025/07/19 23:39:59]Invalid click on tile (14,12)
+[2025/07/19 23:40:00]Invalid click on tile (13,12)
+[2025/07/19 23:40:00]Board updated for Player 2
+[2025/07/19 23:40:00]Player attempting move from (14,12) to (13,12)
+[2025/07/19 23:40:08]Invalid click on tile (13,13)
+[2025/07/19 23:40:15]Invalid click on tile (13,12)
+[2025/07/19 23:40:15]Player selected attacker at (13,12)
+[2025/07/19 23:40:16]Invalid click on tile (13,13)
+[2025/07/19 23:40:16]Player attempting attack from (13,12) to a unit (13,13)
+[2025/07/19 23:40:18]Player 2 ended turn.
+[2025/07/19 23:40:18]Player 1's turn started.
+[2025/07/19 23:40:22]Invalid click on tile (13,13)
+[2025/07/19 23:40:22]Player selected attacker at (13,13)
+[2025/07/19 23:40:23]Invalid click on tile (13,12)
+[2025/07/19 23:40:23]Player attempting attack from (13,13) to a unit (13,12)
+[2025/07/19 23:40:32]Player 1 ended turn.
+[2025/07/19 23:40:32]Player 2's turn started.
+[2025/07/19 23:40:35]Invalid click on tile (13,12)
+[2025/07/19 23:40:35]Player selected attacker at (13,12)
+[2025/07/19 23:40:36]Invalid click on tile (13,13)
+[2025/07/19 23:40:36]Player attempting attack from (13,12) to a unit (13,13)
+[2025/07/19 23:40:40]Player 2 ended turn.
+[2025/07/19 23:40:40]Player 1's turn started.
+[2025/07/19 23:40:42]Player 1 ended turn.
+[2025/07/19 23:40:42]Player 2's turn started.
+[2025/07/19 23:40:45]Invalid click on tile (13,12)
+[2025/07/19 23:40:45]Player selected attacker at (13,12)
+[2025/07/19 23:40:45]Invalid click on tile (13,13)
+[2025/07/19 23:40:45]Player attempting attack from (13,12) to a unit (13,13)
+[2025/07/19 23:40:47]Player 2 ended turn.
+[2025/07/19 23:40:47]Player 1's turn started.
+[2025/07/19 23:40:51]Player 1 ended turn.
+[2025/07/19 23:40:51]Player 2's turn started.
+[2025/07/19 23:41:08]Invalid click on tile (13,12)
+[2025/07/19 23:41:08]Player selected attacker at (13,12)
+[2025/07/19 23:41:10]Invalid click on tile (13,12)
+[2025/07/19 23:41:10]Player selected attacker at (13,12)
+[2025/07/19 23:41:10]Invalid click on tile (13,13)
+[2025/07/19 23:41:10]Board updated for Player 2
+[2025/07/19 23:41:10]Player killd a unit (13,13)
+[2025/07/19 23:41:31]Player 2's turn timed out.
+[2025/07/19 23:41:31]Player 2 ended turn.
+[2025/07/19 23:41:31]Player 1's turn started.
+[2025/07/19 23:42:12]Player 1's turn timed out.
+[2025/07/19 23:42:12]Player 1 ended turn.
+[2025/07/19 23:42:12]Player 2's turn started.
+[2025/07/19 23:42:18]Invalid click on tile (18,1)
+[2025/07/19 23:42:20]Invalid click on tile (14,11)
+[2025/07/19 23:42:20]Board updated for Player 2
+[2025/07/19 23:42:20]Player has bought a unit with level1(14,11) from (18,1)
+[2025/07/19 23:42:45]Player 2 ended turn.
+[2025/07/19 23:42:45]Player 1's turn started.
+[2025/07/19 23:43:10]Invalid click on tile (1,18)
+[2025/07/19 23:43:12]Invalid click on tile (3,16)
+[2025/07/19 23:43:12]Board updated for Player 1
+[2025/07/19 23:43:12]Player has bought a unit with level1(3,16) from (1,18)
+[2025/07/19 23:43:18]Invalid click on tile (1,18)
+[2025/07/19 23:43:20]Invalid click on tile (13,13)
+[2025/07/19 23:43:20]Board updated for Player 1
+[2025/07/19 23:43:20]Player has bought a unit with level1(13,13) from (1,18)
+[2025/07/19 23:43:25]Player 1's turn timed out.
+[2025/07/19 23:43:25]Player 1 ended turn.
+[2025/07/19 23:43:25]Player 2's turn started.
+[2025/07/19 23:44:05]Player 2's turn timed out.
+[2025/07/19 23:44:05]Player 2 ended turn.
+[2025/07/19 23:44:05]Player 1's turn started.
+[2025/07/19 23:44:46]Player 1's turn timed out.
+[2025/07/19 23:44:46]Player 1 ended turn.
+[2025/07/19 23:44:46]Player 2's turn started.
+[2025/07/19 23:45:26]Player 2's turn timed out.
+[2025/07/19 23:45:26]Player 2 ended turn.
+[2025/07/19 23:45:26]Player 1's turn started.
+[2025/07/19 23:46:06]Player 1's turn timed out.
+[2025/07/19 23:46:06]Player 1 ended turn.
+[2025/07/19 23:46:06]Player 2's turn started.
+[2025/07/19 23:46:38]New Game clicked - showing player selection dialog
+[2025/07/19 23:46:40]Board updated for Player 1
+[2025/07/19 23:46:40]Player 1's turn started.
+[2025/07/19 23:47:03]Invalid click on tile (3,16)
+[2025/07/19 23:47:04]Invalid click on tile (4,16)
+[2025/07/19 23:47:04]Board updated for Player 1
+[2025/07/19 23:47:04]Player attempting move from (3,16) to (4,16)
+[2025/07/19 23:47:05]Player 1 ended turn.
+[2025/07/19 23:47:05]Player 2's turn started.
+[2025/07/19 23:47:09]Invalid click on tile (16,3)
+[2025/07/19 23:47:10]Invalid click on tile (15,4)
+[2025/07/19 23:47:10]Board updated for Player 2
+[2025/07/19 23:47:10]Player attempting move from (16,3) to (15,4)
+[2025/07/19 23:47:12]Player 2 ended turn.
+[2025/07/19 23:47:12]Player 3's turn started.
+[2025/07/19 23:47:16]Invalid click on tile (3,3)
+[2025/07/19 23:47:16]Invalid click on tile (4,4)
+[2025/07/19 23:47:16]Board updated for Player 3
+[2025/07/19 23:47:16]Player attempting move from (3,3) to (4,4)
+[2025/07/19 23:47:52]Player 3's turn timed out.
+[2025/07/19 23:47:52]Player 3 ended turn.
+[2025/07/19 23:47:52]Player 4's turn started.
+[2025/07/19 23:48:09]Invalid click on tile (16,16)
+[2025/07/19 23:48:10]Invalid click on tile (15,15)
+[2025/07/19 23:48:10]Board updated for Player 4
+[2025/07/19 23:48:10]Player attempting move from (16,16) to (15,15)
+[2025/07/19 23:48:13]Player 4 ended turn.
+[2025/07/19 23:48:13]Player 1's turn started.
+[2025/07/19 23:48:15]Invalid click on tile (4,16)
+[2025/07/19 23:48:16]Invalid click on tile (5,15)
+[2025/07/19 23:48:16]Board updated for Player 1
+[2025/07/19 23:48:16]Player attempting move from (4,16) to (5,15)
+[2025/07/19 23:48:23]Player 1 ended turn.
+[2025/07/19 23:48:23]Player 2's turn started.
+[2025/07/19 23:48:28]Invalid click on tile (4,4)
+[2025/07/19 23:48:32]Invalid click on tile (15,4)
+[2025/07/19 23:48:32]Invalid click on tile (14,5)
+[2025/07/19 23:48:32]Board updated for Player 2
+[2025/07/19 23:48:32]Player attempting move from (15,4) to (14,5)
+[2025/07/19 23:48:34]Player 2 ended turn.
+[2025/07/19 23:48:34]Player 3's turn started.
+[2025/07/19 23:48:37]Invalid click on tile (4,4)
+[2025/07/19 23:48:37]Invalid click on tile (5,4)
+[2025/07/19 23:48:37]Board updated for Player 3
+[2025/07/19 23:48:37]Player attempting move from (4,4) to (5,4)
+[2025/07/19 23:48:41]Player 3 ended turn.
+[2025/07/19 23:48:41]Player 4's turn started.
+[2025/07/19 23:48:43]Invalid click on tile (15,15)
+[2025/07/19 23:48:43]Invalid click on tile (15,14)
+[2025/07/19 23:48:43]Board updated for Player 4
+[2025/07/19 23:48:43]Player attempting move from (15,15) to (15,14)
+[2025/07/19 23:48:45]Player 4 ended turn.
+[2025/07/19 23:48:45]Player 1's turn started.
+[2025/07/19 23:48:46]Invalid click on tile (5,15)
+[2025/07/19 23:48:47]Invalid click on tile (6,15)
+[2025/07/19 23:48:47]Board updated for Player 1
+[2025/07/19 23:48:47]Player attempting move from (5,15) to (6,15)
+[2025/07/19 23:53:48]New Game clicked - showing player selection dialog
+[2025/07/19 23:53:50]Board updated for Player 1
+[2025/07/19 23:53:50]Player 1's turn started.
+[2025/07/19 23:53:52]Player 1 ended turn.
+[2025/07/19 23:53:52]Player 2's turn started.
+[2025/07/19 23:53:57]Invalid click on tile (16,3)
+[2025/07/19 23:53:57]Invalid click on tile (15,4)
+[2025/07/19 23:53:57]Board updated for Player 2
+[2025/07/19 23:53:57]Player attempting move from (16,3) to (15,4)
+[2025/07/19 23:53:58]Player 2 ended turn.
+[2025/07/19 23:53:58]Player 1's turn started.
+[2025/07/19 23:54:00]Invalid click on tile (3,16)
+[2025/07/19 23:54:01]Invalid click on tile (4,15)
+[2025/07/19 23:54:01]Board updated for Player 1
+[2025/07/19 23:54:01]Player attempting move from (3,16) to (4,15)
+[2025/07/19 23:54:02]Player 1 ended turn.
+[2025/07/19 23:54:02]Player 2's turn started.
+[2025/07/19 23:54:03]Invalid click on tile (4,15)
+[2025/07/19 23:54:06]Invalid click on tile (15,4)
+[2025/07/19 23:54:07]Invalid click on tile (15,5)
+[2025/07/19 23:54:07]Board updated for Player 2
+[2025/07/19 23:54:07]Player attempting move from (15,4) to (15,5)
+[2025/07/19 23:54:08]Player 2 ended turn.
+[2025/07/19 23:54:08]Player 1's turn started.
+[2025/07/19 23:54:09]Invalid click on tile (4,15)
+[2025/07/19 23:54:10]Invalid click on tile (6,15)
+[2025/07/19 23:54:12]Invalid click on tile (5,15)
+[2025/07/19 23:54:12]Board updated for Player 1
+[2025/07/19 23:54:12]Player attempting move from (4,15) to (5,15)
+[2025/07/19 23:54:13]Player 1 ended turn.
+[2025/07/19 23:54:13]Player 2's turn started.
+[2025/07/19 23:54:15]Invalid click on tile (15,5)
+[2025/07/19 23:54:15]Invalid click on tile (15,6)
+[2025/07/19 23:54:15]Board updated for Player 2
+[2025/07/19 23:54:15]Player attempting move from (15,5) to (15,6)
+[2025/07/19 23:54:29]Invalid click on tile (15,6)
+[2025/07/19 23:54:31]Player 2 ended turn.
+[2025/07/19 23:54:31]Player 1's turn started.
+[2025/07/19 23:54:32]Invalid click on tile (5,15)
+[2025/07/19 23:54:33]Invalid click on tile (6,15)
+[2025/07/19 23:54:33]Board updated for Player 1
+[2025/07/19 23:54:33]Player attempting move from (5,15) to (6,15)
+[2025/07/19 23:54:34]Player 1 ended turn.
+[2025/07/19 23:54:34]Player 2's turn started.
+[2025/07/19 23:54:35]Invalid click on tile (7,15)
+[2025/07/19 23:54:38]Invalid click on tile (6,15)
+[2025/07/19 23:54:40]Player 2 ended turn.
+[2025/07/19 23:54:40]Player 1's turn started.
+[2025/07/19 23:54:42]Invalid click on tile (6,15)
+[2025/07/19 23:54:42]Invalid click on tile (7,15)
+[2025/07/19 23:54:42]Board updated for Player 1
+[2025/07/19 23:54:42]Player attempting move from (6,15) to (7,15)
+[2025/07/19 23:54:43]Player 1 ended turn.
+[2025/07/19 23:54:43]Player 2's turn started.
+[2025/07/19 23:54:45]Invalid click on tile (15,6)
+[2025/07/19 23:54:46]Invalid click on tile (14,7)
+[2025/07/19 23:54:46]Board updated for Player 2
+[2025/07/19 23:54:46]Player attempting move from (15,6) to (14,7)
+[2025/07/19 23:54:47]Player 2 ended turn.
+[2025/07/19 23:54:47]Player 1's turn started.
+[2025/07/19 23:54:49]Invalid click on tile (7,15)
+[2025/07/19 23:54:49]Invalid click on tile (8,15)
+[2025/07/19 23:54:49]Board updated for Player 1
+[2025/07/19 23:54:49]Player attempting move from (7,15) to (8,15)
+[2025/07/19 23:54:50]Player 1 ended turn.
+[2025/07/19 23:54:50]Player 2's turn started.
+[2025/07/19 23:54:52]Invalid click on tile (14,7)
+[2025/07/19 23:54:52]Invalid click on tile (14,8)
+[2025/07/19 23:54:52]Board updated for Player 2
+[2025/07/19 23:54:52]Player attempting move from (14,7) to (14,8)
+[2025/07/19 23:54:53]Player 2 ended turn.
+[2025/07/19 23:54:53]Player 1's turn started.
+[2025/07/19 23:54:54]Invalid click on tile (8,15)
+[2025/07/19 23:54:55]Invalid click on tile (9,15)
+[2025/07/19 23:54:55]Board updated for Player 1
+[2025/07/19 23:54:55]Player attempting move from (8,15) to (9,15)
+[2025/07/19 23:54:56]Player 1 ended turn.
+[2025/07/19 23:54:56]Player 2's turn started.
+[2025/07/19 23:54:57]Invalid click on tile (14,8)
+[2025/07/19 23:54:58]Invalid click on tile (14,9)
+[2025/07/19 23:54:58]Board updated for Player 2
+[2025/07/19 23:54:58]Player attempting move from (14,8) to (14,9)
+[2025/07/19 23:54:59]Player 2 ended turn.
+[2025/07/19 23:54:59]Player 1's turn started.
+[2025/07/19 23:55:00]Invalid click on tile (9,15)
+[2025/07/19 23:55:00]Invalid click on tile (10,15)
+[2025/07/19 23:55:00]Board updated for Player 1
+[2025/07/19 23:55:00]Player attempting move from (9,15) to (10,15)
+[2025/07/19 23:55:01]Player 1 ended turn.
+[2025/07/19 23:55:01]Player 2's turn started.
+[2025/07/19 23:55:03]Invalid click on tile (14,9)
+[2025/07/19 23:55:03]Invalid click on tile (14,10)
+[2025/07/19 23:55:03]Board updated for Player 2
+[2025/07/19 23:55:03]Player attempting move from (14,9) to (14,10)
+[2025/07/19 23:55:04]Player 2 ended turn.
+[2025/07/19 23:55:04]Player 1's turn started.
+[2025/07/19 23:55:06]Invalid click on tile (10,15)
+[2025/07/19 23:55:06]Invalid click on tile (11,15)
+[2025/07/19 23:55:06]Board updated for Player 1
+[2025/07/19 23:55:06]Player attempting move from (10,15) to (11,15)
+[2025/07/19 23:55:07]Player 1 ended turn.
+[2025/07/19 23:55:07]Player 2's turn started.
+[2025/07/19 23:55:09]Invalid click on tile (14,10)
+[2025/07/19 23:55:09]Invalid click on tile (13,11)
+[2025/07/19 23:55:09]Board updated for Player 2
+[2025/07/19 23:55:09]Player attempting move from (14,10) to (13,11)
+[2025/07/19 23:55:10]Player 2 ended turn.
+[2025/07/19 23:55:10]Player 1's turn started.
+[2025/07/19 23:55:12]Invalid click on tile (11,15)
+[2025/07/19 23:55:12]Invalid click on tile (12,14)
+[2025/07/19 23:55:12]Board updated for Player 1
+[2025/07/19 23:55:12]Player attempting move from (11,15) to (12,14)
+[2025/07/19 23:55:14]Player 1 ended turn.
+[2025/07/19 23:55:14]Player 2's turn started.
+[2025/07/19 23:55:15]Invalid click on tile (13,11)
+[2025/07/19 23:55:15]Invalid click on tile (13,12)
+[2025/07/19 23:55:15]Board updated for Player 2
+[2025/07/19 23:55:15]Player attempting move from (13,11) to (13,12)
+[2025/07/19 23:55:16]Player 2 ended turn.
+[2025/07/19 23:55:16]Player 1's turn started.
+[2025/07/19 23:55:18]Invalid click on tile (12,14)
+[2025/07/19 23:55:19]Invalid click on tile (13,13)
+[2025/07/19 23:55:19]Board updated for Player 1
+[2025/07/19 23:55:19]Player attempting move from (12,14) to (13,13)
+[2025/07/19 23:55:29]Player 1 ended turn.
+[2025/07/19 23:55:29]Player 2's turn started.
+[2025/07/19 23:55:32]Invalid click on tile (13,12)
+[2025/07/19 23:55:32]Player selected attacker at (13,12)
+[2025/07/19 23:55:32]Invalid click on tile (13,13)
+[2025/07/19 23:55:32]Player attempting attack from (13,12) to a unit (13,13)
+[2025/07/19 23:55:34]Player 2 ended turn.
+[2025/07/19 23:55:34]Player 1's turn started.
+[2025/07/19 23:55:36]Invalid click on tile (13,12)
+[2025/07/19 23:55:41]Player 1 ended turn.
+[2025/07/19 23:55:41]Player 2's turn started.
+[2025/07/19 23:55:43]Invalid click on tile (13,12)
+[2025/07/19 23:55:43]Player selected attacker at (13,12)
+[2025/07/19 23:55:43]Invalid click on tile (13,13)
+[2025/07/19 23:55:43]Player attempting attack from (13,12) to a unit (13,13)
+[2025/07/19 23:55:45]Player 2 ended turn.
+[2025/07/19 23:55:45]Player 1's turn started.
+[2025/07/19 23:55:47]Player 1 ended turn.
+[2025/07/19 23:55:47]Player 2's turn started.
+[2025/07/19 23:55:48]Invalid click on tile (13,12)
+[2025/07/19 23:55:52]Invalid click on tile (13,12)
+[2025/07/19 23:55:52]Player selected attacker at (13,12)
+[2025/07/19 23:55:52]Invalid click on tile (13,13)
+[2025/07/19 23:55:52]Player attempting attack from (13,12) to a unit (13,13)
+[2025/07/19 23:55:54]Player 2 ended turn.
+[2025/07/19 23:55:54]Player 1's turn started.
+[2025/07/19 23:55:57]Player 1 ended turn.
+[2025/07/19 23:55:57]Player 2's turn started.
+[2025/07/19 23:55:59]Invalid click on tile (13,12)
+[2025/07/19 23:55:59]Player selected attacker at (13,12)
+[2025/07/19 23:56:02]Invalid click on tile (13,13)
+[2025/07/19 23:56:02]Board updated for Player 2
+[2025/07/19 23:56:02]Player killd a unit (13,13)
+[2025/07/19 23:56:07]Invalid click on tile (13,12)
+[2025/07/19 23:56:07]Invalid click on tile (13,13)
+[2025/07/19 23:56:07]Board updated for Player 2
+[2025/07/19 23:56:07]Player attempting move from (13,12) to (13,13)
+[2025/07/19 23:56:08]Player 2 ended turn.
+[2025/07/19 23:56:08]Player 1's turn started.
+[2025/07/19 23:56:15]Player 1 ended turn.
+[2025/07/19 23:56:15]Player 2's turn started.
+[2025/07/19 23:56:17]Invalid click on tile (13,13)
+[2025/07/19 23:56:18]Invalid click on tile (12,14)
+[2025/07/19 23:56:18]Board updated for Player 2
+[2025/07/19 23:56:18]Player attempting move from (13,13) to (12,14)
+[2025/07/19 23:56:19]Player 2 ended turn.
+[2025/07/19 23:56:19]Player 1's turn started.
+[2025/07/19 23:56:25]Player 1 ended turn.
+[2025/07/19 23:56:25]Player 2's turn started.
+[2025/07/19 23:56:30]Invalid click on tile (12,14)
+[2025/07/19 23:56:30]Invalid click on tile (11,14)
+[2025/07/19 23:56:30]Board updated for Player 2
+[2025/07/19 23:56:30]Player attempting move from (12,14) to (11,14)
+[2025/07/19 23:56:32]Player 2 ended turn.
+[2025/07/19 23:56:32]Player 1's turn started.
+[2025/07/19 23:56:32]Player 1 ended turn.
+[2025/07/19 23:56:32]Player 2's turn started.
+[2025/07/19 23:56:35]Invalid click on tile (11,14)
+[2025/07/19 23:56:35]Invalid click on tile (10,15)
+[2025/07/19 23:56:35]Board updated for Player 2
+[2025/07/19 23:56:35]Player attempting move from (11,14) to (10,15)
+[2025/07/19 23:56:36]Player 2 ended turn.
+[2025/07/19 23:56:36]Player 1's turn started.
+[2025/07/19 23:56:38]Player 1 ended turn.
+[2025/07/19 23:56:38]Player 2's turn started.
+[2025/07/19 23:56:39]Invalid click on tile (10,15)
+[2025/07/19 23:56:40]Invalid click on tile (9,16)
+[2025/07/19 23:56:40]Board updated for Player 2
+[2025/07/19 23:56:40]Player attempting move from (10,15) to (9,16)
+[2025/07/19 23:56:41]Player 2 ended turn.
+[2025/07/19 23:56:41]Player 1's turn started.
+[2025/07/19 23:56:42]Player 1 ended turn.
+[2025/07/19 23:56:42]Player 2's turn started.
+[2025/07/19 23:56:44]Invalid click on tile (9,16)
+[2025/07/19 23:56:44]Invalid click on tile (8,17)
+[2025/07/19 23:56:44]Board updated for Player 2
+[2025/07/19 23:56:44]Player attempting move from (9,16) to (8,17)
+[2025/07/19 23:56:45]Player 2 ended turn.
+[2025/07/19 23:56:45]Player 1's turn started.
+[2025/07/19 23:56:47]Player 1 ended turn.
+[2025/07/19 23:56:47]Player 2's turn started.
+[2025/07/19 23:56:48]Invalid click on tile (8,17)
+[2025/07/19 23:56:52]Invalid click on tile (8,17)
+[2025/07/19 23:56:52]Invalid click on tile (7,17)
+[2025/07/19 23:56:52]Board updated for Player 2
+[2025/07/19 23:56:52]Player attempting move from (8,17) to (7,17)
+[2025/07/19 23:56:53]Player 2 ended turn.
+[2025/07/19 23:56:53]Player 1's turn started.
+[2025/07/19 23:56:54]Player 1 ended turn.
+[2025/07/19 23:56:54]Player 2's turn started.
+[2025/07/19 23:56:56]Invalid click on tile (7,17)
+[2025/07/19 23:56:56]Invalid click on tile (6,17)
+[2025/07/19 23:56:56]Board updated for Player 2
+[2025/07/19 23:56:56]Player attempting move from (7,17) to (6,17)
+[2025/07/19 23:56:57]Player 2 ended turn.
+[2025/07/19 23:56:57]Player 1's turn started.
+[2025/07/19 23:56:58]Player 1 ended turn.
+[2025/07/19 23:56:58]Player 2's turn started.
+[2025/07/19 23:57:00]Invalid click on tile (6,17)
+[2025/07/19 23:57:01]Invalid click on tile (4,17)
+[2025/07/19 23:57:01]Board updated for Player 2
+[2025/07/19 23:57:01]Player attempting move from (6,17) to (4,17)
+[2025/07/19 23:57:04]Player 2 ended turn.
+[2025/07/19 23:57:04]Player 1's turn started.
+[2025/07/19 23:57:08]Player 1 ended turn.
+[2025/07/19 23:57:08]Player 2's turn started.
+[2025/07/19 23:57:10]Invalid click on tile (4,17)
+[2025/07/19 23:57:11]Invalid click on tile (3,18)
+[2025/07/19 23:57:11]Board updated for Player 2
+[2025/07/19 23:57:11]Player attempting move from (4,17) to (3,18)
+[2025/07/19 23:57:13]Player 2 ended turn.
+[2025/07/19 23:57:13]Player 1's turn started.
+[2025/07/19 23:57:14]Player 1 ended turn.
+[2025/07/19 23:57:14]Player 2's turn started.
+[2025/07/19 23:57:16]Invalid click on tile (3,18)
+[2025/07/19 23:57:16]Invalid click on tile (2,18)
+[2025/07/19 23:57:16]Board updated for Player 2
+[2025/07/19 23:57:16]Player attempting move from (3,18) to (2,18)
+[2025/07/19 23:57:18]Player 2 ended turn.
+[2025/07/19 23:57:18]Player 1's turn started.
+[2025/07/19 23:57:20]Invalid click on tile (2,18)
+[2025/07/19 23:57:24]Player 1 ended turn.
+[2025/07/19 23:57:24]Player 2's turn started.
+[2025/07/19 23:57:25]Invalid click on tile (2,18)
+[2025/07/19 23:57:26]Invalid click on tile (1,18)
+[2025/07/19 23:57:33]Invalid click on tile (2,18)
+[2025/07/19 23:57:33]Player selected attacker at (2,18)
+[2025/07/19 23:57:34]Invalid click on tile (1,18)
+[2025/07/19 23:57:34]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:57:35]Player 2 ended turn.
+[2025/07/19 23:57:35]Player 1's turn started.
+[2025/07/19 23:57:36]Player 1 ended turn.
+[2025/07/19 23:57:36]Player 2's turn started.
+[2025/07/19 23:57:38]Invalid click on tile (2,18)
+[2025/07/19 23:57:38]Player selected attacker at (2,18)
+[2025/07/19 23:57:38]Invalid click on tile (1,18)
+[2025/07/19 23:57:38]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:57:40]Player 2 ended turn.
+[2025/07/19 23:57:40]Player 1's turn started.
+[2025/07/19 23:57:40]Player 1 ended turn.
+[2025/07/19 23:57:40]Player 2's turn started.
+[2025/07/19 23:57:42]Invalid click on tile (2,18)
+[2025/07/19 23:57:42]Player selected attacker at (2,18)
+[2025/07/19 23:57:42]Invalid click on tile (1,18)
+[2025/07/19 23:57:42]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:57:45]Player 2 ended turn.
+[2025/07/19 23:57:45]Player 1's turn started.
+[2025/07/19 23:57:47]Player 1 ended turn.
+[2025/07/19 23:57:47]Player 2's turn started.
+[2025/07/19 23:57:49]Invalid click on tile (2,18)
+[2025/07/19 23:57:49]Player selected attacker at (2,18)
+[2025/07/19 23:57:49]Invalid click on tile (1,18)
+[2025/07/19 23:57:49]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:57:51]Player 2 ended turn.
+[2025/07/19 23:57:51]Player 1's turn started.
+[2025/07/19 23:57:51]Player 1 ended turn.
+[2025/07/19 23:57:51]Player 2's turn started.
+[2025/07/19 23:57:53]Invalid click on tile (2,18)
+[2025/07/19 23:57:53]Player selected attacker at (2,18)
+[2025/07/19 23:57:53]Invalid click on tile (1,18)
+[2025/07/19 23:57:53]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:57:54]Player 2 ended turn.
+[2025/07/19 23:57:54]Player 1's turn started.
+[2025/07/19 23:57:54]Player 1 ended turn.
+[2025/07/19 23:57:54]Player 2's turn started.
+[2025/07/19 23:57:56]Invalid click on tile (2,18)
+[2025/07/19 23:57:56]Player selected attacker at (2,18)
+[2025/07/19 23:57:56]Invalid click on tile (1,18)
+[2025/07/19 23:57:56]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:57:57]Player 2 ended turn.
+[2025/07/19 23:57:57]Player 1's turn started.
+[2025/07/19 23:57:58]Player 1 ended turn.
+[2025/07/19 23:57:58]Player 2's turn started.
+[2025/07/19 23:58:00]Invalid click on tile (2,18)
+[2025/07/19 23:58:00]Player selected attacker at (2,18)
+[2025/07/19 23:58:00]Invalid click on tile (1,18)
+[2025/07/19 23:58:00]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:58:02]Player 2 ended turn.
+[2025/07/19 23:58:02]Player 1's turn started.
+[2025/07/19 23:58:02]Player 1 ended turn.
+[2025/07/19 23:58:02]Player 2's turn started.
+[2025/07/19 23:58:04]Invalid click on tile (2,18)
+[2025/07/19 23:58:04]Player selected attacker at (2,18)
+[2025/07/19 23:58:04]Invalid click on tile (1,18)
+[2025/07/19 23:58:04]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:58:07]Player 2 ended turn.
+[2025/07/19 23:58:07]Player 1's turn started.
+[2025/07/19 23:58:07]Player 1 ended turn.
+[2025/07/19 23:58:07]Player 2's turn started.
+[2025/07/19 23:58:09]Invalid click on tile (2,18)
+[2025/07/19 23:58:09]Player selected attacker at (2,18)
+[2025/07/19 23:58:09]Invalid click on tile (1,18)
+[2025/07/19 23:58:09]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:58:11]Player 2 ended turn.
+[2025/07/19 23:58:11]Player 1's turn started.
+[2025/07/19 23:58:11]Player 1 ended turn.
+[2025/07/19 23:58:11]Player 2's turn started.
+[2025/07/19 23:58:14]Invalid click on tile (2,18)
+[2025/07/19 23:58:14]Player selected attacker at (2,18)
+[2025/07/19 23:58:15]Invalid click on tile (1,18)
+[2025/07/19 23:58:15]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:58:17]Player 2 ended turn.
+[2025/07/19 23:58:17]Player 1's turn started.
+[2025/07/19 23:58:29]Player 1 ended turn.
+[2025/07/19 23:58:29]Player 2's turn started.
+[2025/07/19 23:58:31]Invalid click on tile (2,18)
+[2025/07/19 23:58:31]Player selected attacker at (2,18)
+[2025/07/19 23:58:31]Invalid click on tile (1,18)
+[2025/07/19 23:58:31]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:58:40]Invalid click on tile (18,1)
+[2025/07/19 23:58:41]Invalid click on tile (3,18)
+[2025/07/19 23:58:41]Board updated for Player 2
+[2025/07/19 23:58:41]Player has bought a unit with level1(3,18) from (18,1)
+[2025/07/19 23:58:48]Invalid click on tile (3,18)
+[2025/07/19 23:58:48]Invalid click on tile (2,17)
+[2025/07/19 23:58:48]Board updated for Player 2
+[2025/07/19 23:58:48]Player attempting move from (3,18) to (2,17)
+[2025/07/19 23:58:50]Player 2 ended turn.
+[2025/07/19 23:58:50]Player 1's turn started.
+[2025/07/19 23:58:51]Player 1 ended turn.
+[2025/07/19 23:58:51]Player 2's turn started.
+[2025/07/19 23:58:53]Invalid click on tile (2,17)
+[2025/07/19 23:58:53]Invalid click on tile (1,17)
+[2025/07/19 23:58:53]Board updated for Player 2
+[2025/07/19 23:58:53]Player attempting move from (2,17) to (1,17)
+[2025/07/19 23:58:55]Invalid click on tile (2,18)
+[2025/07/19 23:58:55]Player selected attacker at (2,18)
+[2025/07/19 23:58:56]Invalid click on tile (1,18)
+[2025/07/19 23:58:56]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:58:59]Invalid click on tile (1,17)
+[2025/07/19 23:58:59]Player selected attacker at (1,17)
+[2025/07/19 23:58:59]Invalid click on tile (1,18)
+[2025/07/19 23:58:59]Player attempting attack from (1,17) to a structure (1,18)
+[2025/07/19 23:59:00]Player 2 ended turn.
+[2025/07/19 23:59:00]Player 1's turn started.
+[2025/07/19 23:59:02]Player 1 ended turn.
+[2025/07/19 23:59:02]Player 2's turn started.
+[2025/07/19 23:59:03]Invalid click on tile (2,18)
+[2025/07/19 23:59:03]Player selected attacker at (2,18)
+[2025/07/19 23:59:04]Invalid click on tile (1,18)
+[2025/07/19 23:59:04]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:59:06]Invalid click on tile (1,17)
+[2025/07/19 23:59:06]Player selected attacker at (1,17)
+[2025/07/19 23:59:06]Invalid click on tile (1,18)
+[2025/07/19 23:59:06]Player attempting attack from (1,17) to a structure (1,18)
+[2025/07/19 23:59:08]Player 2 ended turn.
+[2025/07/19 23:59:08]Player 1's turn started.
+[2025/07/19 23:59:08]Player 1 ended turn.
+[2025/07/19 23:59:08]Player 2's turn started.
+[2025/07/19 23:59:10]Invalid click on tile (1,17)
+[2025/07/19 23:59:10]Player selected attacker at (1,17)
+[2025/07/19 23:59:11]Invalid click on tile (1,18)
+[2025/07/19 23:59:11]Player attempting attack from (1,17) to a structure (1,18)
+[2025/07/19 23:59:11]Invalid click on tile (2,18)
+[2025/07/19 23:59:15]Invalid click on tile (2,18)
+[2025/07/19 23:59:15]Player selected attacker at (2,18)
+[2025/07/19 23:59:16]Invalid click on tile (1,18)
+[2025/07/19 23:59:16]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:59:18]Player 2 ended turn.
+[2025/07/19 23:59:18]Player 1's turn started.
+[2025/07/19 23:59:21]Invalid click on tile (1,17)
+[2025/07/19 23:59:21]Player selected attacker at (1,17)
+[2025/07/19 23:59:21]Invalid click on tile (1,18)
+[2025/07/19 23:59:29]Player 1 ended turn.
+[2025/07/19 23:59:29]Player 2's turn started.
+[2025/07/19 23:59:31]Invalid click on tile (1,17)
+[2025/07/19 23:59:31]Player selected attacker at (1,17)
+[2025/07/19 23:59:31]Invalid click on tile (1,18)
+[2025/07/19 23:59:31]Player attempting attack from (1,17) to a structure (1,18)
+[2025/07/19 23:59:32]Invalid click on tile (2,18)
+[2025/07/19 23:59:37]Invalid click on tile (2,18)
+[2025/07/19 23:59:37]Player selected attacker at (2,18)
+[2025/07/19 23:59:37]Invalid click on tile (1,18)
+[2025/07/19 23:59:37]Player attempting attack from (2,18) to a structure (1,18)
+[2025/07/19 23:59:38]Player 2 ended turn.
+[2025/07/19 23:59:38]Player 1's turn started.
+[2025/07/19 23:59:39]Player 1 ended turn.
+[2025/07/19 23:59:39]Player 2's turn started.
+[2025/07/19 23:59:41]Invalid click on tile (2,18)
+[2025/07/19 23:59:41]Player selected attacker at (2,18)
+[2025/07/19 23:59:41]Invalid click on tile (1,18)
+[2025/07/19 23:59:41]Board updated for Player 2
+[2025/07/19 23:59:41]Player destroyed a structure (1,18)
+[2025/07/19 23:59:55]Player 2 ended turn.
+[2025/07/19 23:59:55]Player 1 has been removed.
+[2025/07/19 23:59:55]Player 1 has lost.
+[2025/07/20 00:01:20]Player 2 has won.
+[2025/07/20 00:01:46]New Game clicked - showing player selection dialog
+[2025/07/20 00:01:47]Board updated for Player 1
+[2025/07/20 00:01:47]Player 1's turn started.
+[2025/07/20 00:02:27]Player 1's turn timed out.
+[2025/07/20 00:02:27]Player 1 ended turn.
+[2025/07/20 00:05:17]New Game clicked - showing player selection dialog
+[2025/07/20 00:05:20]Board updated for Player 1
+[2025/07/20 00:05:20]Player 1's turn started.
+[2025/07/20 03:18:48]New Game clicked - showing player selection dialog
+[2025/07/20 03:18:50]Board updated for Player 1
+[2025/07/20 03:18:50]Player 1's turn started.
+[2025/07/20 03:19:03]Invalid click on tile (4,16)
+[2025/07/20 03:19:09]Invalid click on tile (3,16)
+[2025/07/20 03:19:10]Invalid click on tile (4,16)
+[2025/07/20 03:19:10]Board updated for Player 1
+[2025/07/20 03:19:10]Player attempting move from (3,16) to (4,16)
+[2025/07/20 03:19:12]Player 1 ended turn.
+[2025/07/20 03:19:12]Player 2's turn started.
+[2025/07/20 03:19:16]Invalid click on tile (16,3)
+[2025/07/20 03:19:17]Invalid click on tile (16,4)
+[2025/07/20 03:19:17]Board updated for Player 2
+[2025/07/20 03:19:17]Player attempting move from (16,3) to (16,4)
+[2025/07/20 03:19:23]Invalid click on tile (16,2)
+[2025/07/20 03:19:23]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/20 03:19:31]Invalid click on tile (18,1)
+[2025/07/20 03:19:33]Invalid click on tile (16,2)
+[2025/07/20 03:19:33]Board updated for Player 2
+[2025/07/20 03:19:33]Player has bought a unit with level1(16,2) from (18,1)
+[2025/07/20 03:19:34]Invalid click on tile (16,2)
+[2025/07/20 03:19:47]Invalid click on tile (16,4)
+[2025/07/20 03:19:51]Invalid click on tile (16,2)
+[2025/07/20 03:19:52]Invalid click on tile (16,4)
+[2025/07/20 03:19:53]Player 2's turn timed out.
+[2025/07/20 03:19:53]Player 2 ended turn.
+[2025/07/20 03:19:53]Player 1's turn started.
+[2025/07/20 03:19:56]Player 1 ended turn.
+[2025/07/20 03:19:56]Player 2's turn started.
+[2025/07/20 03:20:37]Player 2's turn timed out.
+[2025/07/20 03:20:37]Player 2 ended turn.
+[2025/07/20 03:20:37]Player 1's turn started.
+[2025/07/20 03:21:10]Player 1 ended turn.
+[2025/07/20 03:21:10]Player 2's turn started.
+[2025/07/20 03:21:14]Invalid click on tile (16,2)
+[2025/07/20 03:21:15]Invalid click on tile (16,4)
+[2025/07/20 03:21:15]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.units.Unit1.getlevel()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getUnit()" is null
+[2025/07/20 03:21:27]Invalid click on tile (16,2)
+[2025/07/20 03:21:32]Player 2 ended turn.
+[2025/07/20 03:21:32]Player 1's turn started.
+[2025/07/20 03:21:38]Invalid click on tile (4,16)
+[2025/07/20 03:21:38]Invalid click on tile (5,16)
+[2025/07/20 03:21:38]Board updated for Player 1
+[2025/07/20 03:21:38]Player attempting move from (4,16) to (5,16)
+[2025/07/20 03:25:20]New Game clicked - showing player selection dialog
+[2025/07/20 03:25:22]Board updated for Player 1
+[2025/07/20 03:25:22]Player 1's turn started.
+[2025/07/20 03:25:28]Invalid click on tile (3,16)
+[2025/07/20 03:25:28]Invalid click on tile (4,16)
+[2025/07/20 03:25:28]Board updated for Player 1
+[2025/07/20 03:25:28]Player attempting move from (3,16) to (4,16)
+[2025/07/20 03:25:44]Invalid click on tile (2,17)
+[2025/07/20 03:25:44]Board updated for Player 1
+[2025/07/20 03:25:44]Player attempting to build Barrack at (2,17)
+[2025/07/20 03:25:55]Player 1 ended turn.
+[2025/07/20 03:25:55]Player 2's turn started.
+[2025/07/20 03:25:58]Player 2 ended turn.
+[2025/07/20 03:25:58]Player 1's turn started.
+[2025/07/20 03:26:06]Invalid click on tile (3,16)
+[2025/07/20 03:26:06]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/20 03:26:21]Invalid click on tile (1,18)
+[2025/07/20 03:26:22]Invalid click on tile (3,16)
+[2025/07/20 03:26:22]Board updated for Player 1
+[2025/07/20 03:26:22]Player has bought a unit with level2(3,16) from (1,18)
+[2025/07/20 03:26:28]Invalid click on tile (4,16)
+[2025/07/20 03:26:29]Invalid click on tile (5,16)
+[2025/07/20 03:26:29]Board updated for Player 1
+[2025/07/20 03:26:29]Player attempting move from (4,16) to (5,16)
+[2025/07/20 03:26:32]Invalid click on tile (3,16)
+[2025/07/20 03:26:33]Invalid click on tile (3,15)
+[2025/07/20 03:26:33]Board updated for Player 1
+[2025/07/20 03:26:33]Player attempting move from (3,16) to (3,15)
+[2025/07/20 03:26:36]Invalid click on tile (3,15)
+[2025/07/20 03:26:38]Player 1's turn timed out.
+[2025/07/20 03:26:38]Player 1 ended turn.
+[2025/07/20 03:26:38]Player 2's turn started.
+[2025/07/20 03:26:44]Player 2 ended turn.
+[2025/07/20 03:26:44]Player 1's turn started.
+[2025/07/20 03:26:46]Invalid click on tile (5,16)
+[2025/07/20 03:26:47]Invalid click on tile (6,16)
+[2025/07/20 03:26:47]Board updated for Player 1
+[2025/07/20 03:26:47]Player attempting move from (5,16) to (6,16)
+[2025/07/20 03:26:51]Invalid click on tile (3,15)
+[2025/07/20 03:26:51]Invalid click on tile (4,15)
+[2025/07/20 03:26:51]Board updated for Player 1
+[2025/07/20 03:26:51]Player attempting move from (3,15) to (4,15)
+[2025/07/20 03:26:55]Invalid click on tile (4,15)
+[2025/07/20 03:26:59]Invalid click on tile (5,15)
