@@ -481,9 +481,10 @@ public class GameManager {
         return false;
     }
     public void merge(Player player,int unit1x,int unit1y,int unit2x,int unit2y) {
+        int Level=GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel();
         int from1=GameBoard.gameBoard[unit1x][unit1y].getUnit().getProducedBy();
         int from2=GameBoard.gameBoard[unit2x][unit2y].getUnit().getProducedBy();
-        if(GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel()==1){
+        if(Level==1){
             for(int i=0; i<player.playerStructures.size();i++){
                 if(player.getStructure(i).getProduceNum()==from2){
                     player.getStructure(i).setUnitSpace(player.getStructure(i).getUnitSpace()+1);
@@ -496,7 +497,7 @@ public class GameManager {
             GameBoard.gameBoard[unit2x][unit2y].setUnit(new Spearman(player.getPlayerNumber(),from1));
             player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
         }
-        if(GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel()==2){
+        if(Level==2){
             int from=0;
             if(HasEnoughUnitSpaceByPN(player,from1,1)){
                 from=from1;
@@ -549,7 +550,7 @@ public class GameManager {
             GameBoard.gameBoard[unit2x][unit2y].setUnit(new Swordman(player.getPlayerNumber(),from));
             player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
         }
-        if(GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel()==3){
+        if(Level==3){
             for(int i=0; i<player.playerStructures.size();i++){
                 if(player.getStructure(i).getProduceNum()==from2){
                     player.getStructure(i).setUnitSpace(player.getStructure(i).getUnitSpace()+2);
@@ -660,26 +661,29 @@ public class GameManager {
         public boolean isUnitMine(int x, int y,Player player){
             return getTile(x,y).getBlock().getOwner()==player.getPlayerNumber();
         }
-        public void whereToMove(int UnitX,int UnitY,Player player){
-            for(int i=1;i<19;i++){
-                for(int j=1;j<19;j++){
-                    if(getTile(i,j).getBlock().getOwner()==player.getPlayerNumber()&&!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
+    public void whereToMove(int UnitX,int UnitY,Player player){
+        for(int i=1;i<19;i++){
+            for(int j=1;j<19;j++){
+                if(getTile(i,j).getBlock().getOwner()==player.getPlayerNumber()&&!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
+                    GameBoard.gameBoard[i][j].setMovable(true);
+                }
+            }
+        }
+        int moveRange= GameBoard.gameBoard[UnitX][UnitY].getUnit().getMovementRange();
+        for(int i=UnitX-moveRange;i<UnitX+moveRange;i++){
+            for(int j=UnitY-moveRange;j<UnitY+moveRange;j++){
+                if(0<=i && i<19 && 0<=j && j<19){
+                    if(!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit()){
                         GameBoard.gameBoard[i][j].setMovable(true);
                     }
                 }
-            }
-            int moveRange= GameBoard.gameBoard[UnitX][UnitY].getUnit().getMovementRange();
-            for(int i=UnitX-moveRange;i<UnitX+moveRange;i++){
-                for(int j=UnitY-moveRange;j<UnitY+moveRange;j++){
-                    if(!GameBoard.gameBoard[i][j].hasStructure() && !GameBoard.gameBoard[i][j].hasUnit())
-                        if(0<=i && i<19 && 0<=j && j<19){
-                            GameBoard.gameBoard[i][j].setMovable(true);
-                        }
 
-                }
+
+
             }
-            GameBoard.gameBoard[UnitX][UnitY].setMovable(false);
         }
+        GameBoard.gameBoard[UnitX][UnitY].setMovable(false);
+    }
         public boolean canMoveTo(int x, int y){
             if(GameBoard.gameBoard[x][y].getMovable()){
                 return true;
