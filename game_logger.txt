@@ -1237,3 +1237,35 @@
 [2025/07/20 03:26:51]Player attempting move from (3,15) to (4,15)
 [2025/07/20 03:26:55]Invalid click on tile (4,15)
 [2025/07/20 03:26:59]Invalid click on tile (5,15)
+[2025/07/20 03:52:24]New Game clicked - showing player selection dialog
+[2025/07/20 03:52:26]Board updated for Player 1
+[2025/07/20 03:52:26]Player 1's turn started.
+[2025/07/20 03:53:06]Player 1's turn timed out.
+[2025/07/20 03:53:06]Player 1 ended turn.
+[2025/07/20 03:53:06]Player 2's turn started.
+[2025/07/20 03:53:46]Player 2's turn timed out.
+[2025/07/20 03:53:46]Player 2 ended turn.
+[2025/07/20 03:53:46]Player 1's turn started.
+[2025/07/20 03:54:26]Player 1's turn timed out.
+[2025/07/20 03:54:26]Player 1 ended turn.
+[2025/07/20 03:54:26]Player 2's turn started.
+[2025/07/20 03:54:49]Invalid click on tile (16,2)
+[2025/07/20 03:54:49]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/20 03:55:02]Invalid click on tile (17,1)
+[2025/07/20 03:55:02]Unexpected error in boardAction: Cannot invoke "src.Game.src.main.java.org.example.Models.Structures.Structure1.getUnitSpace()" because the return value of "src.Game.src.main.java.org.example.Models.Tile.getStructure()" is null
+[2025/07/20 03:55:07]Player 2's turn timed out.
+[2025/07/20 03:55:07]Player 2 ended turn.
+[2025/07/20 03:55:07]Player 1's turn started.
+[2025/07/20 03:55:11]Invalid click on tile (18,1)
+[2025/07/20 03:55:13]Invalid click on tile (17,2)
+[2025/07/20 03:55:22]Invalid click on tile (18,1)
+[2025/07/20 03:55:24]Invalid click on tile (16,2)
+[2025/07/20 03:55:31]Invalid click on tile (1,18)
+[2025/07/20 03:55:32]Invalid click on tile (2,16)
+[2025/07/20 03:55:32]Board updated for Player 1
+[2025/07/20 03:55:32]Player has bought a unit with level1(2,16) from (1,18)
+[2025/07/20 03:55:35]Invalid click on tile (2,16)
+[2025/07/20 03:55:36]Invalid click on tile (3,16)
+[2025/07/20 03:55:36]Board updated for Player 1
+[2025/07/20 03:55:36]Player attempting merge firs unit (2,16)with second unit at (3,16)
+[2025/07/20 03:55:38]Invalid click on tile (4,16)
