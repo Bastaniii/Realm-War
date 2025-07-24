@@ -8,6 +8,7 @@ import java.util.Map;
 public class UnitSelectorPanel extends JPanel {
     private JComboBox<String> UnitSelector;
     private Map<String, Integer> nameToIdMap;
+    private Map<Integer, String> idToNameMap;
 
     public UnitSelectorPanel() {
         setLayout(new FlowLayout());
@@ -27,6 +28,14 @@ public class UnitSelectorPanel extends JPanel {
         nameToIdMap.put("Swordman", 3);
         nameToIdMap.put("Knight", 4);
 
+
+        idToNameMap = new HashMap<>();
+        idToNameMap.put(1, "Peasant");
+        idToNameMap.put(2, "Spearman");
+        idToNameMap.put(3, "Swordman");
+        idToNameMap.put(4, "Knight");
+
+
         UnitSelector = new JComboBox<>(names);
         UnitSelector.setFont(new Font("Arial", Font.PLAIN, 14));
 
@@ -40,7 +49,12 @@ public class UnitSelectorPanel extends JPanel {
         return nameToIdMap.getOrDefault(selected, -1);
     }
     public void resetSelectedUnitId(int id) {
-        UnitSelector.setSelectedIndex(id);
+        if(id!=-1){
+            UnitSelector.setSelectedItem(idToNameMap.get(id));
+        }
+        else {
+            UnitSelector.setSelectedItem(null);
+        }
     }
 
 }
