@@ -475,12 +475,20 @@ public class GameManager {
     // merge
     public boolean CanMerge(Player player,int unit1x,int unit1y,int unit2x,int unit2y) {
         int Space=1;
+        int from1= GameBoard.gameBoard[unit1x][unit1y].getStructure().getProduceNum();
+        int from2= GameBoard.gameBoard[unit2x][unit2y].getStructure().getProduceNum();
         if(canMerge (GameBoard.gameBoard[unit1x][unit1y].getUnit(),GameBoard.gameBoard[unit2x][unit2y].getUnit())){
             if(GameBoard.gameBoard[unit1x][unit1y].getUnit().getlevel()==2){
-                if(hasEnoughUnitSpace(player, 1)){
-                    return true;
+                if(from1==from2){
+                   return true;
                 }
-                return false;
+                else{
+                    if(hasEnoughUnitSpace(player, 2) || HasEnoughUnitSpaceByPN(player,from1,Space) || HasEnoughUnitSpaceByPN(player,from2,Space)){
+                        return true;
+                    }
+                    return false;
+                }
+
             }
             return true;
         }
