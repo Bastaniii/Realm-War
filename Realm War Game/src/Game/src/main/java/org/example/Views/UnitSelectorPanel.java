@@ -39,7 +39,7 @@ public class UnitSelectorPanel extends JPanel {
         String selected = (String) UnitSelector.getSelectedItem();
         return nameToIdMap.getOrDefault(selected, -1);
     }
-    public void resetSelectedStructureId(int id) {
+    public void resetSelectedUnitId(int id) {
         UnitSelector.setSelectedIndex(id);
     }
 

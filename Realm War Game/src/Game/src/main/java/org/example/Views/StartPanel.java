@@ -85,7 +85,7 @@ public class StartPanel extends JPanel {
         buttonPanel.setOpaque(true);
         buttonPanel.add(Box.createHorizontalGlue());
         buttonPanel.add(newGame);
-        buttonPanel.add(Box.createHorizontalStrut(50)); // فاصله بین دکمه‌ها
+        buttonPanel.add(Box.createHorizontalStrut(50));
         buttonPanel.add(loadGame);
         buttonPanel.add(Box.createHorizontalGlue());
         add(buttonPanel, BorderLayout.CENTER);

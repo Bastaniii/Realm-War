@@ -182,7 +182,7 @@ public class GameManager {
             GameLogger.log("ForestBlock changed to EmptyBlock");
         }
         if(structureType.equals("Barrack")){
-            GameBoard.gameBoard[x][y].setStructure(new Barrack1(player.getBarrackBuildingCost(),player.getPlayerNumber(),player.getNumberOfBarrack()+1));
+            GameBoard.gameBoard[x][y].setStructure(new Barrack1(player.getBarrackBuildingCost(),player.getPlayerNumber(),player.getProducerNumber()));
             player.setplayerGold(player.getPlayerGold()-GameBoard.gameBoard[x][y].getStructure().getBuildingCost());
             player.addStructure(GameBoard.gameBoard[x][y].getStructure());
             for(int i=0;i<player.playerUnits.size();i++){
@@ -367,7 +367,13 @@ public class GameManager {
 
                 }
             }
-
+            getPlayer(GameBoard.gameBoard[x][y].getBlock().getOwner()).updateBarrackBuildingCost();
+        }
+        if(GameBoard.gameBoard[x][y].getStructure().getType().equals("Farm")){
+            getPlayer(GameBoard.gameBoard[x][y].getBlock().getOwner()).updateFarmBuildingCost();
+        }
+        if(GameBoard.gameBoard[x][y].getStructure().getType().equals("Market")){
+            getPlayer(GameBoard.gameBoard[x][y].getBlock().getOwner()).updatedMarketBuildingCost();
         }
         getPlayer(GameBoard.gameBoard[x][y].getBlock().getOwner()).removeStructure(GameBoard.gameBoard[x][y].getStructure());
         GameBoard.gameBoard[x][y].setStructure(null);
@@ -498,57 +504,68 @@ public class GameManager {
             player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
         }
         if(Level==2){
-            int from=0;
-            if(HasEnoughUnitSpaceByPN(player,from1,1)){
-                from=from1;
-                for(int j=0;j<player.playerStructures.size();j++){
-                    if(player.getStructure(j).getProduceNum()==from1){
-                        player.getStructure(j).setUnitSpace(player.getStructure(j).getUnitSpace()-1);
-                    }
-                }
-                for(int h=0;h<player.playerStructures.size();h++){
-                    if(player.getStructure(h).getProduceNum()==from2){
-                        player.getStructure(h).setUnitSpace(player.getStructure(h).getUnitSpace()+1);
-                    }
-                }
+            if(from1==from2){
+                player.removeUnit(GameBoard.gameBoard[unit1x][unit1y].getUnit());
+                player.removeUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
+                GameBoard.gameBoard[unit1x][unit1y].setUnit(null);
+                GameBoard.gameBoard[unit2x][unit2y].setUnit(null);
+                GameBoard.gameBoard[unit2x][unit2y].setUnit(new Spearman(player.getPlayerNumber(),from1));
+                player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
             }
-            if(HasEnoughUnitSpaceByPN(player,from2,1)){
-                from=from2;
-                for(int j=0;j<player.playerStructures.size();j++){
-                    if(player.getStructure(j).getProduceNum()==from2){
-                        player.getStructure(j).setUnitSpace(player.getStructure(j).getUnitSpace()-1);
+            else{
+                int from=0;
+                if(HasEnoughUnitSpaceByPN(player,from1,1)){
+                    from=from1;
+                    for(int j=0;j<player.playerStructures.size();j++){
+                        if(player.getStructure(j).getProduceNum()==from1){
+                            player.getStructure(j).setUnitSpace(player.getStructure(j).getUnitSpace()-1);
+                        }
+                    }
+                    for(int h=0;h<player.playerStructures.size();h++){
+                        if(player.getStructure(h).getProduceNum()==from2){
+                            player.getStructure(h).setUnitSpace(player.getStructure(h).getUnitSpace()+1);
+                        }
                     }
                 }
-                for(int h=0;h<player.playerStructures.size();h++){
-                    if(player.getStructure(h).getProduceNum()==from1){
-                        player.getStructure(h).setUnitSpace(player.getStructure(h).getUnitSpace()+1);
+                if(HasEnoughUnitSpaceByPN(player,from2,1)){
+                    from=from2;
+                    for(int j=0;j<player.playerStructures.size();j++){
+                        if(player.getStructure(j).getProduceNum()==from2){
+                            player.getStructure(j).setUnitSpace(player.getStructure(j).getUnitSpace()-1);
+                        }
+                    }
+                    for(int h=0;h<player.playerStructures.size();h++){
+                        if(player.getStructure(h).getProduceNum()==from1){
+                            player.getStructure(h).setUnitSpace(player.getStructure(h).getUnitSpace()+1);
+                        }
                     }
                 }
+                else if(!HasEnoughUnitSpaceByPN(player, from1, 1) && !HasEnoughUnitSpaceByPN(player, from2, 1)){
+                    from=whichHasEnoughUnitSpaceByPN(player,2);
+                    for(int j=0;j<player.playerStructures.size();j++){
+                        if(player.getStructure(j).getProduceNum()==from2){
+                            player.getStructure(j).setUnitSpace(player.getStructure(j).getUnitSpace()+1);
+                        }
+                    }
+                    for(int h=0;h<player.playerStructures.size();h++){
+                        if(player.getStructure(h).getProduceNum()==from1){
+                            player.getStructure(h).setUnitSpace(player.getStructure(h).getUnitSpace()+1);
+                        }
+                    }
+                    for(int h=0;h<player.playerStructures.size();h++){
+                        if(player.getStructure(h).getProduceNum()==from){
+                            player.getStructure(h).setUnitSpace(player.getStructure(h).getUnitSpace()-2);
+                        }
+                    }
+                }
+                player.removeUnit(GameBoard.gameBoard[unit1x][unit1y].getUnit());
+                player.removeUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
+                GameBoard.gameBoard[unit1x][unit1y].setUnit(null);
+                GameBoard.gameBoard[unit2x][unit2y].setUnit(null);
+                GameBoard.gameBoard[unit2x][unit2y].setUnit(new Swordman(player.getPlayerNumber(),from));
+                player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
             }
-            else if(!HasEnoughUnitSpaceByPN(player, from1, 1) && !HasEnoughUnitSpaceByPN(player, from2, 1)){
-                from=whichHasEnoughUnitSpaceByPN(player,2);
-                for(int j=0;j<player.playerStructures.size();j++){
-                    if(player.getStructure(j).getProduceNum()==from2){
-                        player.getStructure(j).setUnitSpace(player.getStructure(j).getUnitSpace()+1);
-                    }
-                }
-                for(int h=0;h<player.playerStructures.size();h++){
-                    if(player.getStructure(h).getProduceNum()==from1){
-                        player.getStructure(h).setUnitSpace(player.getStructure(h).getUnitSpace()+1);
-                    }
-                }
-                for(int h=0;h<player.playerStructures.size();h++){
-                    if(player.getStructure(h).getProduceNum()==from){
-                        player.getStructure(h).setUnitSpace(player.getStructure(h).getUnitSpace()-2);
-                    }
-                }
-            }
-            player.removeUnit(GameBoard.gameBoard[unit1x][unit1y].getUnit());
-            player.removeUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
-            GameBoard.gameBoard[unit1x][unit1y].setUnit(null);
-            GameBoard.gameBoard[unit2x][unit2y].setUnit(null);
-            GameBoard.gameBoard[unit2x][unit2y].setUnit(new Swordman(player.getPlayerNumber(),from));
-            player.addUnit(GameBoard.gameBoard[unit2x][unit2y].getUnit());
+
         }
         if(Level==3){
             for(int i=0; i<player.playerStructures.size();i++){

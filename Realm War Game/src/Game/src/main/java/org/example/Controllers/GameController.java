@@ -221,9 +221,9 @@ public class GameController extends Container {
             timer.stop();
             GameLogger.log("Player " + gameManager.whoseTurn().getPlayerNumber() + " ended turn.");
         }
-            gameManager.refreshPlayer(gameManager.getPlayers());
             gameManager.player(gameManager.getPlayers());
             gameManager.check(gameManager.getPlayers());
+            gameManager.refreshPlayer(gameManager.getPlayers());
             gameManager.getPlayerTurn().nextTurn();
             StartTurn();
 
@@ -385,8 +385,8 @@ public class GameController extends Container {
         this.producerY=-1;
         this.newUnitX=-1;
         this.newUnitY=-1;
-        actionPanel.getStructureSelector().setSelectedStructureType(null);// change
-        actionPanel.getUnitSelector().resetSelectedStructureId(-1);//
+        actionPanel.getStructureSelector().setSelectedStructureType(null);
+        actionPanel.getUnitSelector().resetSelectedUnitId(-1);
     }
     public void button1(){
         this.players=2;

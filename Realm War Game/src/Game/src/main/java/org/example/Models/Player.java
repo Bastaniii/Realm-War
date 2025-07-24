@@ -142,5 +142,33 @@ public class Player {
         }
         return numberOfTower;
     }
+    public int getProducerNumber(){
+        int count2=0;
+        int count3=0;
+        int count4=0;
+        for(Structure1 structure : playerStructures){
+            if (structure.getType().equals("Barrack")){
+             if(structure.getProduceNum()==2){
+                 count2++;
+             }
+             if(structure.getProduceNum()==3){
+                 count3++;
+             }
+             if(structure.getProduceNum()==4){
+                 count4++;
+             }
+            }
+            if(count2==0){
+                return 2;
+            }
+            if(count3==0){
+                return 3;
+            }
+            if(count4==0){
+                return 4;
+            }
+        }
+        return 0;
+    }
 
 }
