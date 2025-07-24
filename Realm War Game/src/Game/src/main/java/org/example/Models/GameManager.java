@@ -820,7 +820,12 @@ public class GameManager {
     }
     //player
     public Player getPlayer(int playerNum){
-        return players.get(playerNum-1);
+        for(Player player : players){
+            if(player.getPlayerNumber()==playerNum){
+                return player;
+            }
+        }
+        return null;
     }
     public Player whoseTurn(){
         return playerTurn.getCurrentPlayer();
