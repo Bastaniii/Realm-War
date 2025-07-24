@@ -145,7 +145,7 @@ public class GameBoard {
                 }
             }
             gameBoard[18][18].setStructure(new TownHall(4));
-            gameBoard[16][16].setUnit(new Peasant(3, 1));
+            gameBoard[16][16].setUnit(new Peasant(4, 1));
 
         }
 
