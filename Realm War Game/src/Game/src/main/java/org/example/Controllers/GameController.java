@@ -1,5 +1,7 @@
 package src.Game.src.main.java.org.example.Controllers;
 import src.Game.src.main.java.org.example.Models.GameManager;
+import src.Game.src.main.java.org.example.Models.Player;
+import src.Game.src.main.java.org.example.Utils.Data;
 import src.Game.src.main.java.org.example.Utils.GameLogger;
 import src.Game.src.main.java.org.example.Views.ActionPanel;
 import src.Game.src.main.java.org.example.Views.InfoPanel;
@@ -9,6 +11,7 @@ import src.Game.src.main.java.org.example.Views.GameBoardPanel;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class GameController extends Container {
@@ -121,7 +124,7 @@ public class GameController extends Container {
     protected int loser;
     protected int winner;
     protected boolean endGame;
-
+    protected Data data;
     public GameController(){
         rightPanel=new JPanel();
         rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.Y_AXIS));
@@ -333,6 +336,15 @@ public class GameController extends Container {
         actionPanel.getBuildStructure().addActionListener(e -> buildNewStructure());
         actionPanel.getBuyUnit().addActionListener( buyNewUnit());
         actionPanel.getEndTurn().addActionListener(e ->  endTurn());
+        actionPanel.getSave().addActionListener(e -> {
+            try {
+                saveData();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            } catch (ClassNotFoundException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
         infoPanel=new InfoPanel();
         infoPanel.update(gameManager.whoseTurn());
         SwingUtilities.invokeLater(this::StartTurn);
@@ -1033,5 +1045,47 @@ public class GameController extends Container {
 
 
         };
+    }
+    public void saveData() throws SQLException, ClassNotFoundException {
+        data=new Data();
+        data.createBlockTable();
+        data.createUnitTable();
+        data.createStructureTable();
+        data.createGameTable();
+        data.createPlayerTable();
+        data.insertGame(gameManager.getPlayerTurn().getCurrentPlayerIndex(),players,timeLeft);
+        for(Player player: gameManager.getPlayers()){
+            data.insertPlayer(players,player.getPlayerGold(),player.getPlayerFood(),player.isDefeated(),player.getBarrackBuildingCost(),player.getFarmBuildingCost(),player.getMarketBuildingCost() ,player.getTowerBuildingCost());
+        }
+
+        for(int i=0; i<20; i++){
+            for(int j=0; j<20; j++){
+                data.insertBlock(i,j,gameManager.getTile(i,j).getBlock().getType(),gameManager.getTile(i,j).getBlock().getOwner());
+                if(gameManager.getTile(i,j).hasStructure()){
+                    data.insertStructure(i,j,gameManager.getTile(i,j).getStructure().getType() ,gameManager.getTile(i,j).getStructure().getowner(),gameManager.getTile(i,j).getStructure().getHitPoint(),gameManager.getTile(i,j).getStructure().getLevel(),gameManager.getTile(i,j).getStructure().getBuildingCost(),gameManager.getTile(i,j).getStructure().getMaintenanceCost() , gameManager.getTile(i,j).getStructure().getLevelUpCost(),
+                            gameManager.getTile(i,j).getStructure().getUnitSpace(),gameManager.getTile(i,j).getStructure().getDefenceRange(),gameManager.getTile(i,j).getStructure().getProduceNum() ,gameManager.getTile(i,j).getStructure().isPaidStructure());
+                }
+                if(gameManager.getTile(i,j).hasUnit()){
+                    data.insertUnit(i,j,gameManager.getTile(i,j).getUnit().getlevel(),gameManager.getTile(i,j).getUnit().getOwner(),
+                            gameManager.getTile(i,j).getUnit().getHitPoint(),gameManager.getTile(i,j).getUnit().getProducedBy(),
+                            gameManager.getTile(i,j).getUnit().getHasSpace(),gameManager.getTile(i,j).getUnit().isHaveEaten(),
+                            gameManager.getTile(i,j).getUnit().isPaid(),gameManager.getTile(i,j).getUnit().isHasAttacked(),
+                            gameManager.getTile(i,j).getUnit().isHasMoved());
+                }
+            }
+        }
+        this.endGame=true;
+        timer.stop();
+        if (timer != null && timer.isRunning()) {
+            timer.stop();
+        }
+
+        game.remove(board);
+        game.remove(rightPanel);
+        disposeGame();
+        game.setContentPane(new StartPanel());
+        game.revalidate();
+        game.repaint();
+        GameLogger.log("Game saved");
     }
 }

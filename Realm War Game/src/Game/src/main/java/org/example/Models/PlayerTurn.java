@@ -77,5 +77,8 @@ public class PlayerTurn {
         }
         losers.remove(player);
     }
+    public int getCurrentPlayerIndex() {
+        return currentPlayerIndex;
+    }
 }
 
