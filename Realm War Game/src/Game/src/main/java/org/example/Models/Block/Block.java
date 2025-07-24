@@ -3,11 +3,8 @@ package src.Game.src.main.java.org.example.Models.Block;
 
 
 public abstract class Block {
-    protected int x;
-    protected int y;
     protected boolean hasOwner;
     protected int owner;
-    protected  String type;
     protected int gold;
     protected int food;
     protected boolean hasBuilt;
@@ -25,9 +22,7 @@ public abstract class Block {
     public void setOwner(int owner) {
         this.owner = owner;
     }
-    public String getType() {
-        return type;
-    }
+    public abstract String getType();
     public int getGold() {
         return gold;
     }
