@@ -242,7 +242,7 @@ public class GameManager {
             }
         }
         if(typeOfStructure.equals("Tower")){
-            if(Tower.getBuildingCost()<player.getPlayerGold()){
+            if(player.getTowerBuildingCost()<player.getPlayerGold()){
                 return true;
             }
         }

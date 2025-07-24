@@ -97,6 +97,9 @@ public class Player {
     public void updatedMarketBuildingCost () {
         this.marketBuildingCost =getNumberOfMarket()*5+10;
     }
+    public int getTowerBuildingCost(){
+        return towerBuildingCost;
+    }
     public int getMarketBuildingCost() {
         return marketBuildingCost;
     }
