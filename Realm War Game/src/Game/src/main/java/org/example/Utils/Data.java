@@ -7,13 +7,10 @@ public class Data {
     private Connection conn;
 
     public Data() throws ClassNotFoundException, SQLException {
-        String url = "jdbc:postgresql://localhost:5432/ realm war";
+        String url = "jdbc:postgresql://localhost:5432/ gameWar";
         String user = "postgres";
         String password = "Yjw83beoxW2";
         conn = DriverManager.getConnection(url, user, password);
-    }
-    public Connection getConnection() {
-        return conn;
     }
     public void createBlockTable() throws SQLException {
         String sql = "CREATE TABLE IF NOT EXISTS blocks (" +
