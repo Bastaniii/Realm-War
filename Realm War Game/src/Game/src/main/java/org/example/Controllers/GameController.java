@@ -117,7 +117,7 @@ public class GameController extends Container {
     protected String newStructure;
     private Timer timer;
     private  int duration=40;
-    private int timeLeft= duration;
+    private int timeLeft;
     protected int loser;
     protected int winner;
     protected boolean endGame;
